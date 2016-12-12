@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>유선품질 119 &lt; BOARD &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$(".proc_state").each(function(){
+		$(this).bind({
+			"click" : function(){
+				var val = $(this).attr("id");
+				var finishDate = ".finish_date";
+				var memo01 = ".memo01";
+				var memo02 = ".memo02";
+
+				var date = new Date();
+				var year = date.getFullYear();
+				var month = date.getMonth() + 1;
+				var day = date.getDate();
+				if(month < 10){
+					month = "0" + month;
+				}
+				if(day < 10){
+					day = "0" + day;
+				}
+				var today = year+"."+month+"."+day;
+
+				switch (val){
+				case "status01":	//조치예정
+					$(finishDate).val("").removeClass("disable").addClass("disable").attr("disabled", true);
+					$(memo01).val("").removeClass("disable").attr("disabled", false);
+					$(memo02).val("").removeClass("disable").addClass("disable").attr("disabled", true);
+				break;
+				case "status02":	//조치완료
+					$(finishDate).val(today).removeClass("disable").attr("disabled", false);
+					$(memo01).val("").removeClass("disable").addClass("disable").attr("disabled", true);
+					$(memo02).val("").removeClass("disable").attr("disabled", false);
+				break;
+				case "status03":	//조치불가
+					$(finishDate).val(today).removeClass("disable").attr("disabled", false);
+					$(memo01).val("").removeClass("disable").addClass("disable").attr("disabled", true);
+					$(memo02).val("").removeClass("disable").attr("disabled", false);
+				break;
+				}
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="inhead">
+			<h1 class="logo"><a href="#"><img src="/resource/images/common/logo.png" alt="Swing"></a></h1>
+
+			<ul class="tnavi">
+				<li><a href="#" class="top_btn_search"><span>검색</span></a></li>
+				<li><a href="#" class="top_btn_message"><span>To-Do</span></a></li>
+				<li><a href="#" class="top_btn_logout"><span>로그아웃</span></a></li>
+				<!-- 
+				<li><a href="#" class="top_btn_login"><span>로그인</span></a></li>
+				 -->
+				<li><a href="#" class="top_btn_system"><span>시스템맵</span></a></li>
+			</ul>
+
+			<ul class="gnb">
+				<li><a href="#">NOTICE</a></li>
+				<li><a href="#">COMMUNITY</a></li>
+				<li><a href="#">MY PAGE</a></li>
+				<li class="on"><a href="#">BOARD</a></li>
+			</ul>
+		</div>
+	</div><!-- //Header -->
+	<div id="container">
+		<div id="lnb">
+			<div class="incon">
+				<h2 class="lnb_tit">Board</h2>
+				<div class="basic">
+					<ul>
+						<li><a href="SP_BO_1001.html">세일즈톡</a></li>
+						<li><a href="SP_BO_2001.html">통화품질 119</a></li>
+						<li class="on"><a href="SP_BO_3001.html">유선품질 119</a></li>
+						<li><a href="SP_BO_4001.html">광고</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- //LNB -->
+		<div id="content">
+			<div class="incon">
+				<!-- Content Start -->
+
+				<div class="tbl_wrap board">
+					<table class="tbl_write">
+						<caption></caption>
+						<colgroup>
+							<col style="width:20%;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row"><span>조치부서</span></th>
+							<td>SK C&amp;C</td>
+						</tr>
+						<tr>
+							<th scope="row"><span>조치자</span></th>
+							<td>홍길동</td>
+						</tr>
+						<tr>
+							<th scope="row"><span>처리상태</span></th>
+							<td>
+								<input type="radio" name="status" class="proc_state" id="status01" data-target-toggle='{"ele":".duedate", "display":"show"}' /><label for="status01">조치예정</label>
+								<input type="radio" name="status" class="proc_state" id="status02" data-target-toggle='{"ele":".duedate", "display":"hide"}' /><label for="status02">조치완료</label>
+								<input type="radio" name="status" class="proc_state" id="status03" data-target-toggle='{"ele":".duedate", "display":"hide"}' /><label for="status03">조치불가</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt"><span class="point">원인현상메모</span></th>
+							<td><div class="ele_wrap"><textarea name="" id="" cols="30" rows="10"></textarea></div></td>
+						</tr>
+						<tr class="duedate">
+							<th scope="row"><span>조치예정일</span></th>
+							<td>
+								<div class="ele_wrap limit period">
+									<input type="text" value="" data-datepicker />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt"><span>조치예정메모</span></th>
+							<td><div class="ele_wrap"><textarea name="" class="memo01" id="" cols="30" rows="10"></textarea></div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span>조치완료일</span></th>
+							<td>
+								<div class="ele_wrap limit period">
+									<input type="text" value="" class="finish_date" readonly="readonly" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt"><span>조치완료메모</span></th>
+							<td><div class="ele_wrap"><textarea name="" class="memo02" id="" cols="30" rows="10"></textarea></div></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="btnbox">
+					<div class="fr">
+						<a href="#" class="btn confirm">저장</a>
+						<a href="#" class="btn">취소</a>
+					</div>
+				</div>
+
+				<!-- //Content End -->
+			</div>
+		</div><!-- //Content -->
+	</div><!-- //Container -->
+
+	<div id="footer">
+		<div class="infoot">
+			<ul>
+				<li><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">도움말</a></li>
+			</ul>
+			<address>서울특별시 중구 을지로 65(을지로2가) SK텔레콤(주) 대표이사/사장 : 장동현</address>
+			<p class="copyright">COPYRIGHT 2017 BY SKTELECOM CO., LTD. ALL RIGHTS RESERVED</p>
+		</div>
+	</div><!-- //Footer -->
+</div><!-- //Wrap -->
+</body>
+</html>

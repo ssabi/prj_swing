@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>스탭 추가 &lt; COMMUNITY &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<!-- //Popup size : 744x700 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>스탭 추가</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+
+		<div class="search pop">
+			<div>
+				<form action="#" method="post">
+					<select class="sch_sel">
+						<option value="">회원명</option>
+						<option value="">ID</option>
+						<option value="">소속부서</option>
+					</select>
+					<div class="instbox">
+						<div><input type="text" placeholder="검색어를 입력해 주세요." /></div>
+						<input type="submit" class="submit" value="검색" />
+					</div>
+				</form>
+			</div>
+		</div><!-- //Search Form -->
+
+		<div class="tbl_wrap mt10">
+			<table class="tbl_list">
+				<caption></caption>
+				<colgroup>
+						<col style="width:10%;" />
+					<col style="width:20%;" />
+					<col />
+					<col style="width:30%;" />
+					</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">&nbsp;</th>
+					<th scope="col">회원명</th>
+					<th scope="col">아이디</th>
+					<th scope="col">소속</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td><input type="checkbox" name="step" id="chk01" /><label for="chk01"></label></td>
+					<td>홍길동</td>
+					<td>UK12</td>
+					<td class="al_l">수도마케팅 본부</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="step" id="chk02" /><label for="chk02"></label></td>
+					<td>홍길동1</td>
+					<td>UK11</td>
+					<td class="al_l">수도마케팅 본부</td>
+				</tr>
+				<!-- 
+				<tr>
+					<td colspan="4" class="al_c">검색결과가 없습니다.</td>
+				</tr>
+				 -->
+				</tbody>
+			</table>
+		</div><!-- //List Table -->
+
+		<div class="btnbox">
+			<a href="#" class="btn confirm">확인</a>
+			<a href="#" class="btn" data-pop-close="popup">취소</a>
+		</div><!-- //Button -->
+	</div><!-- //Container -->
+</div>
+</body>
+</html>

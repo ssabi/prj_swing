@@ -1,0 +1,160 @@
+/* 설문 */
+.sv_wrap{margin:-40px -40px 0;border-bottom:1px solid #b3b3b3}
+.sv_wrap textarea{border:1px solid #b3b3b3}
+.sv_basic{padding:40px 40px;background-color:#f5f5f6;border-bottom:1px solid #e8e8e8}
+.sv_basic dl{margin:-4px 0;line-height:22px}
+.sv_basic dt{font-weight:bold;font-size:20px;line-height:22px;color:#333;letter-spacing:-0.03em}
+.sv_basic dt>img{margin:-1px 8px 0 0}
+.sv_basic dt .badge{margin:-2px 0 0 0}
+.sv_basic dt i{display:inline-block;overflow:hidden;margin:-2px 0 0 0;vertical-align:middle;text-indent:-9999px}
+.sv_basic dt i.badge_mobile{margin:-1px 8px 0 0;width:13px;height:18px;background:url(/resource/images/common/badge_mobile.png) no-repeat left top}
+.sv_basic dt i.badge_save{width:43px;height:19px;background:url(/resource/images/common/badge_save.png) no-repeat left top}
+.sv_basic dt i.badge_progress{width:43px;height:19px;background:url(/resource/images/common/badge_progress.png) no-repeat left top}
+.sv_basic dt i.badge_standby{width:52px;height:19px;background:url(/resource/images/common/badge_dis_standby.png) no-repeat left top}
+.sv_basic dt i.badge_ing{width:43px;height:19px;background:url(/resource/images/common/badge_dis_ing.png) no-repeat left top}
+.sv_basic dt i.badge_end{width:52px;height:19px;background:url(/resource/images/common/badge_dis_end.png) no-repeat left top}
+.sv_basic dd{position:relative;padding-left:40px;margin-top:2px}
+.sv_basic dd.desc{margin-top:17px;padding:0 0 5px 0;font-size:15px}
+.sv_basic dd span{display:inline-block;position:absolute;left:0;top:0;/* margin-left:-40px; */width:40px;color:#000}
+.sv_basic dd.date span{line-height:32px}
+/* 2016-10-06 추가 - 설문 대상 3줄 이상은 scroll */
+.sv_basic dd .scrollbox{overflow:hidden;overflow-y:auto;padding-right:10px;max-height:66px}
+.sv_basic dd .period{display:inline-block;padding:3px 0 2px;margin-top:-3px;width:140px;vertical-align:middle}
+.sv_basic dd .period p{position:relative;padding-right:22px}
+.sv_basic dd .period p input{width:100%}
+.sv_basic .basic_opt{display:none;padding-top:11px}
+.sv_basic .basic_opt .target_box>div{background-color:#fff}
+.sv_basic .basic_opt div + div{margin-top:5px}
+.sv_basic .basic_opt.file .filebox{}
+.sv_basic .basic_opt.file .filebox label{display:inline-block;position:static;right:auto;left:0}
+.sv_basic .basic_opt.file .filebox span{display:inline-block;position:relative;line-height:34px}
+.sv_basic .basic_opt.file .filebox .filename{padding-left:24px;text-decoration:underline;background:url(/resource/images/common/ico_file02.png) no-repeat left 10px}
+.sv_basic .basic_opt.file .btn, .sv_basic .basic_opt.file label{width:auto;min-width:116px;padding:0;margin-right:5px}
+
+.sv_con{padding:40px 40px 60px}
+#surveyItem.sv_con{padding:0}
+.sv_list{margin-top:-7px;line-height:22px}
+.sv_list + .sv_list{margin-top:55px}
+.sv_tit{position:relative;padding-bottom:17px;font-size:15px}
+.sv_tit .require{display:block;position:absolute;right:0;top:-21px;padding-left:15px;line-height:26px}
+.sv_tit .require:before{content:'*';position:absolute;left:0;top:5px;font-size:26px;color:#ff3b57}
+.sv_item{/* overflow:hidden; */padding-left:18px}
+.sv_item:after{content:'';display:block;width:100%;clear:both}
+/* .sv_item p{padding-left:18px} */
+.sv_item p{position:relative}
+.sv_item p + p, .sv_item + .sv_item{margin-top:15px}
+.sv_item p.desc{margin-bottom:15px;line-height:20px}
+.sv_item input[type=radio]{position:absolute;left:-9999px}
+.sv_item input[type=radio] + label{display:block;padding-left:22px;height:16px;line-height:16px;background:url(/resource/images/common/radio16x16.png) no-repeat left top;cursor:pointer}
+.sv_item input[type=radio]:checked + label{background-position:0 -16px}
+.sv_item input[type=checkbox]{position:absolute;left:-9999px}
+.sv_item input[type=checkbox] + label{display:block;padding-left:22px;height:18px;line-height:18px;background:url(/resource/images/common/chkbox18x18.png) no-repeat left top;cursor:pointer}
+.sv_item input[type=checkbox]:checked + label{background-position:0 -18px}
+.sv_item input[type=text]{width:100%}
+.sv_item .btn, .sv_item .filebox{float:left}
+.sv_item .btn.line02 + .filebox{margin-left:5px}
+.sv_item .btn.line02{color:#4c4c4c}
+.sv_item .btn.line02:active{color:#fff}
+.sv_item .filebox{position:relative;/* padding-right:22px;padding-left:92px */}
+.sv_item .filebox input[type=text]{border:0;height:34px;line-height:34px}
+.sv_item .filebox input[type=file]{}
+.sv_item .filebox label{display:inline-block;position:static;width:auto;min-width:90px;padding:0 10px;vertical-align:middle/* left:0 */}
+.sv_item .filebox span{display:inline-block;position:relative;line-height:34px}
+.sv_item .filebox .filename{overflow:hidden;text-overflow:ellipsis;width:200px;margin-left:5px;padding-left:24px;text-decoration:underline;background:url(/resource/images/common/ico_file02.png) no-repeat left 10px;white-space:nowrap;vertical-align:middle}
+.sv_item .ele_wrap{position:relative;padding-right:82px}
+.sv_item .ele_wrap textarea{padding:5px 10px;width:100%;height:54px;line-height:20px}
+.sv_item .ele_wrap textarea, .sv_item .ele_wrap input[type=text]{padding-right:70px}
+.sv_item .ele_wrap .byte{right:12px;top:0;line-height:32px}
+.sv_item .ele_wrap.textarea .byte{top:auto;bottom:0}
+/* .sv_item p.etc{margin-top:7px;height:26px;padding-top:8px} */
+.sv_item p + p.etc{margin-top:7px;height:26px;padding-top:8px}
+.sv_item + .sv_item p.etc{position:relative;margin-top:-8px;height:26px;padding-top:8px;z-index:10}
+.sv_item p.etc .ele_wrap{display:block;position:absolute;left:60px;right:0;top:0}
+
+/* 설문 결과 */
+.result .sv_list{margin-bottom:-4px}
+.result .sv_tit{padding-bottom:14px}
+.result .sv_item p span{display:inline-block;/* width:90px; */min-width:70px;padding-right:20px}
+.result .sv_item p + p{margin-top:9px}
+
+.sv_wrap .tbl_write .ele_wrap textarea{padding:5px 10px;width:100%;height:54px;line-height:20px}
+.sv_wrap .tbl_write input.disabled:checked + label{background-position:0 -36px;color:#4c4c4c}
+.sv_wrap .tbl_write input.disabled + label{color:#b2b2b2;/* opacity:0.5;color:rgba(0, 0, 0, 1) */}/* Color Value - 4c4c4c = rgb(76, 76, 76)*/
+#pop_container .sv_wrap .tbl_write{margin-bottom:-7px}
+#pop_container .sv_wrap .tbl_write tr:last-child th, #pop_container .sv_wrap .tbl_write tr:last-child td{padding-bottom:0}
+
+/* 설문 문항 추가 */
+.sv_ctrl{position:relative;margin:0 40px;padding:20px 0}
+.sv_ctrl:after{content:'';display:block;width:100%;clear:both}
+.sv_ctrl>div{padding:4px 100px 4px 0}
+.sv_ctrl input[type=radio]{position:absolute;left:-9999px}
+.sv_ctrl input[type=radio] + label{display:inline-block;padding-left:23px;margin:5px 14px 5px 0;height:16px;line-height:16px;background:url(/resource/images/common/radio16x16.png) no-repeat left top;vertical-align:middle;cursor:pointer}
+.sv_ctrl input[type=radio]:checked + label{background-position:0 -16px}
+.sv_ctrl .btn.line02{position:absolute;right:0;top:50%;margin-top:-17px;min-width:70px}
+
+.sv_wrap .item{overflow:hidden;position:relative;padding:40px 99px 40px 107px;border-bottom:1px solid #e8e8e8}
+.sv_wrap .item .side{position:absolute;left:40px;top:40px;width:67px;float:left;padding:0}
+.sv_wrap .item .side p{float:left;width:27px}
+.sv_wrap .item .side p a{display:block;overflow:hidden;margin-bottom:4px;height:26px;border:1px solid #b3b3b3;background:url(/resource/images/common/icon.png) no-repeat left top;text-indent:-9999px}
+.sv_wrap .item .side p a.item_up{background-position:-74px -34px}
+.sv_wrap .item .side p a.item_down{background-position:-95px -34px}
+.sv_wrap .item .side .num{float:right;width:40px;font-size:18px;line-height:28px;text-align:center}
+.sv_wrap .item.first .side .item_up, .sv_wrap .item.last .side .item_down, .sv_wrap .item.one .side .item_up, .sv_wrap .item.one .side .item_down{display:none}
+.sv_wrap .item div{position:relative;padding-right:22px}
+.sv_wrap .item div + div{margin-top:5px}
+.sv_wrap .item .side + div{margin-top:0}
+.sv_wrap .item .sv_impt{position:absolute;right:40px;top:48px}
+.sv_wrap .item .sv_impt input[type=checkbox]{position:absolute;left:-9999px}
+.sv_wrap .item .sv_impt input[type=checkbox] + label{display:block;padding-left:25px;height:18px;line-height:18px;background:url(/resource/images/common/chkbox18x18.png) no-repeat left top;cursor:pointer}
+.sv_wrap .item .sv_impt input[type=checkbox]:checked + label{background-position:0 -18px}
+.sv_wrap .item .item_tit{position:relative;padding-right:82px}
+.sv_wrap .item .item_tit .byte{right:12px;top:0;line-height:32px}
+.sv_wrap .item .item_tit input[type=text]{padding-right:70px}
+.sv_wrap .item div input[type=text]{width:100%}
+.sv_wrap .item div input[type=radio]{position:absolute;left:-9999px}
+.sv_wrap .item div input[type=radio] + label{display:inline-block;width:16px;height:16px;background:url(/resource/images/common/radio16x16.png) no-repeat left top;vertical-align:middle}
+.sv_wrap .item div input[type=radio]:checked + label{background-position:0 -16px}
+.sv_wrap .item div input[type=checkbox]{position:absolute;left:-9999px}
+.sv_wrap .item div input[type=checkbox] + label{display:inline-block;width:18px;height:18px;background:url(/resource/images/common/chkbox18x18.png) no-repeat left top;vertical-align:middle}
+.sv_wrap .item div input[type=checkbox]:checked + label{background-position:0 -18px}
+.sv_wrap .item textarea{width:100%;height:42px;padding:5px 10px;line-height:20px}
+.sv_wrap .item .answer{overflow:hidden}
+.sv_wrap .item .answer p{position:relative;padding:0 90px 0 25px}
+.sv_wrap .item .answer p + p{margin-top:5px}
+.sv_wrap .item .answer p input[type=radio] + label, .sv_wrap .item .answer p input[type=checkbox] + label{position:absolute;left:0;top:0;cursor:pointer}
+.sv_wrap .item .answer p input[type=radio] + label{margin-top:9px}
+.sv_wrap .item .answer p input[type=checkbox] + label{margin-top:8px}
+.sv_wrap .item .answer p input[type=text]{width:100%;padding-right:70px}
+.sv_wrap .item .answer .byte{right:20px;bottom:0;line-height:32px}
+.sv_wrap .item .answer .add_article, .sv_wrap .item .answer .del_article{display:inline-block;overflow:hidden;position:absolute;right:-22px;top:0;margin:6px 0 0 0;width:22px;height:22px;vertical-align:middle;text-indent:-9999px}
+.sv_wrap .item .answer .add_article{background:#e2e2e2 url(/resource/images/common/ico_plus10x10.png) no-repeat center center}
+.sv_wrap .item .answer .del_article{background:#f8d6da url(/resource/images/common/close9x8.png) no-repeat 7px 7px}
+.sv_wrap .item .answer.textarea{padding-right:82px}
+.sv_wrap .item .answer textarea{height:62px;padding-right:70px}
+.sv_wrap .item .answer textarea + .byte{right:12px}
+.sv_wrap .item .answer .chklength{position:relative;padding-right:50px}
+.sv_wrap .item .answer .chklength input{padding-right:60px}
+.sv_wrap .item .answer .chklength .byte{right:-10px;top:0;line-height:32px}
+.sv_wrap .item .answer.filebox input[type=text]{border:0;height:34px;line-height:34px;background-color:transparent}
+.sv_wrap .item .answer.filebox label{display:inline-block;position:static;right:auto;left:0;width:auto;min-width:70px;padding:0 10px;margin-right:5px}
+.sv_wrap .item .answer.filebox span{display:inline-block;position:relative;line-height:34px}
+.sv_wrap .item .answer.filebox .filename{padding-left:24px;text-decoration:underline;background:url(/resource/images/common/ico_file02.png) no-repeat left 10px}
+.sv_wrap .item .desc{clear:both;position:relative;margin:2px 0 -6px;padding-left:15px;line-height:26px}
+.sv_wrap .item .desc span{position:absolute;left:0;top:4px;font-size:26px;color:#ff3b57}
+.sv_wrap .item .answer .desc{margin-top:7px;padding-left:15px;line-height:26px}
+.sv_wrap .item .del_item{margin-top:20px}
+
+.sv_wrap .item .answer .disable{background-color:#fff;border-color:#d9d9d9;color:#b2b2b2}
+.sv_wrap .item .answer .etc input[type=radio] + label{top:50%;margin-top:-8px}
+.sv_wrap .item .answer .etc input[type=checkbox] + label{top:50%;margin-top:-9px}
+.sv_wrap .item .answer .etc .add_etc{}
+.sv_wrap .item .answer .etc .add_etc a{display:inline-block;padding:0 5px;min-width:64px;height:26px;line-height:26px;color:#333;border:1px solid #b3b3b3;border-radius:2px;text-align:center;vertical-align:middle}
+.sv_wrap .item .answer .etc .add_etc a:hover{background-color:#e6e6e6}
+.sv_wrap .item .answer .etc .add_etc a.active, .sv_wrap .item .answer .etc .add_etc a:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}
+
+.filebox{position:relative;padding-right:113px}
+.filebox input[type=text]{}
+.filebox input[type=file]{position:absolute;left:-9999px;top:0}
+.filebox label{display:block;position:absolute;right:0;top:0;width:90px;height:32px;line-height:32px;border:1px solid #b3b3b3;background-color:#e2e2e2;text-align:center;cursor:pointer;transition:all 0.3s ease}
+.filebox label:hover, .filebox label:focus{background-color:#c0c0c0}
+.filebox label:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}

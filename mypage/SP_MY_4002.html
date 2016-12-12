@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>설문 &lt; MY PAGE &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<link rel="stylesheet" href="/resource/css/mq.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<!-- //Popup size : 920x611 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>[취합] 고해지율 유통망 대상 사유</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+		<div class="sv_wrap">
+			<div class="sv_basic">
+				<dl>
+					<dt>[설문] 고해지율 유통망 대상 사유 <img src="/resource/images/common/badge_progress.png" alt="진행" class="badge"></dt>
+					<dd class="desc">고해지율 유통망 대상에 대한 사유를 제출해주세요. </dd>
+					<dd><span>기간</span>2016.01.05 - 2016.02.04</dd>
+					<dd>
+						<span>대상</span>
+						<!-- 
+						2016-10-26 대상 최대 3줄까지만 표시
+						-->
+						<div class="scrollbox">서부 마케팅 본부, 강남 마케팅 팀</div>
+						<!-- //여기까지 -->
+					</dd>
+				</dl>
+			</div><!-- //설문 기본 정보 영역 -->
+			<div class="sv_con">
+				<div class="sv_list">
+					<div class="sv_tit">
+						1. 현재 직책은 어떻게 되십니까?
+						<span class="require">필수문항</span>
+					</div><!-- //문항 타이틀 -->
+					<div class="sv_item">
+						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<p><input type="radio" name="item01" id="svItem01-01" /><label for="svItem01-01">상담매니저</label></p>
+						<p><input type="radio" name="item01" id="svItem01-02" /><label for="svItem01-02">관리자</label></p>
+						<p><input type="radio" name="item01" id="svItem01-03" /><label for="svItem01-03">상담지원</label></p>
+
+						<!-- 
+						2016-10-26 기타 항목 추가(단일/다중 선택에만)
+						-->
+						<p class="etc">
+							<input type="radio" name="item01" id="svItem01-04" /><label for="svItem01-04">기타</label>
+							<span class="ele_wrap" data-chk-length>
+								<input type="text" placeholder="기타 답변을 입력하세요." />
+								<span class="byte"><span>0</span>/<em class="count">126</em></span>
+							</span>
+						</p>
+						<!-- //여기까지 -->
+
+					</div><!-- //문항 옵션 -->
+				</div><!-- //문항 -->
+
+				<div class="sv_list">
+					<div class="sv_tit">
+						2. 현재 직책은 어떻게 되십니까?
+						<span class="require">필수문항</span>
+					</div><!-- //문항 타이틀 -->
+					<div class="sv_item">
+						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<p><input type="checkbox" name="item02" id="svItem02-01" /><label for="svItem02-01">상담매니저</label></p>
+						<p><input type="checkbox" name="item02" id="svItem02-02" /><label for="svItem02-02">관리자</label></p>
+						<p><input type="checkbox" name="item02" id="svItem02-03" /><label for="svItem02-03">상담지원</label></p>
+
+						<!-- 
+						2016-10-26 기타 항목 추가(단일/다중 선택에만)
+						-->
+						<p class="etc">
+							<input type="checkbox" name="item02" id="svItem02-04" /><label for="svItem02-04">기타</label>
+							<span class="ele_wrap" data-chk-length>
+								<input type="text" placeholder="기타 답변을 입력하세요." />
+								<span class="byte"><span>0</span>/<em class="count">126</em></span>
+							</span>
+						</p>
+						<!-- //여기까지 -->
+
+					</div><!-- //문항 옵션 -->
+				</div><!-- //문항 -->
+
+<!-- 
+<div class="sv_list">
+	<div class="sv_tit">[문제3] LIMITED(리미티드) 카드는 2014.11.28(금) 까지 아이폰6/6+ 로 신규가입/기기변경 하는 모든 고객에게 추가로 제공하는 할인 카드이다.</div>
+	<div class="sv_item">
+		<p class="desc">1818188 새로 신설된 요금납부 15일</p>
+	</div>
+	<div class="sv_item">
+		<p><input type="radio" name="O3" id="O30" value="1#8"><label for="O30">기사 역량 부족으로 인한 방문일정 협의</label></p>
+	</div>
+	<div class="sv_item">
+		<p><input type="radio" name="O3" id="O31" value="2#9"><label for="O31">Home센터의 무리한 요구</label></p>
+	</div>
+	<div class="sv_item">
+		<p><input type="radio" name="O3" id="O32" value="3#10"><label for="O32">업무 협조 원활함</label></p>
+	</div>
+	<div class="sv_item">
+		<p class="etc">
+			<input type="radio" name="O3" id="O33" value="4#11"><label for="O33">기타</label>
+			<span class="ele_wrap" data-chk-length="">
+				<input type="text" name="etc3" placeholder="기타 답변을 입력하세요.">
+				<span class="byte"><span>0</span>/<em class="count">126</em></span>
+			</span>
+		</p>
+	</div>
+</div>
+
+<div class="sv_list">
+	<div class="sv_tit">[문제7] 새로 신설된 요금납부 15일 주기의 경우 우편 Only/점자 Only 청구서 고객외에는 모두 신청 가능하다.<p class="desc">1818188</p></div>
+	<div class="sv_item">
+		<p class="desc">1818188 새로 신설된 요금납부 15일</p>
+	</div>
+	<div class="sv_item">
+		<p><input type="checkbox" name="svy7|" id="M70" value="1#22"><label for="M70">SKB 상담사</label></p>
+	</div>
+	<div class="sv_item">
+		<p><input type="checkbox" name="svy7|" id="M71" value="2#23"><label for="M71">T 유선(재판매) 고객센터</label></p>
+	</div>
+	<div class="sv_item">
+		<p><input type="checkbox" name="svy7|" id="M72" value="3#24"><label for="M72">T 무선 고객센터 상담사</label></p>
+	</div>
+	<div class="sv_item">
+		<p><input type="checkbox" name="svy7|" id="M73" value="4#25"><label for="M73">잘 모르겠음</label></p>
+	</div>
+	<div class="sv_item">
+		<p class="etc">
+			<input type="checkbox" name="M7" id="M74" value="5#26"><label for="M74">기타</label>
+			<span class="ele_wrap" data-chk-length="">
+				<input type="text" name="etcD7|5" placeholder="기타 답변을 입력하세요.">
+				<span class="byte"><span>0</span>/<em class="count">126</em></span>
+			</span>
+		</p>
+	</div>
+</div>
+ -->
+
+				<div class="sv_list">
+					<div class="sv_tit">
+						3. 주로 처리 하고 계신 업무는 어떻게 되십니까?
+						<span class="require">필수문항</span>
+					</div><!-- //문항 타이틀 -->
+					<div class="sv_item">
+						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<div class="ele_wrap" data-chk-length>
+							<input type="text" placeholder="답변을 입력하세요." />
+							<span class="byte"><span>0</span>/<em class="count">200</em></span>
+						</div>
+					</div><!-- //문항 옵션 -->
+				</div><!-- //문항 -->
+
+				<div class="sv_list">
+					<div class="sv_tit">
+						4. 주로 처리 하고 계신 업무는 어떻게 되십니까?
+						<span class="require">필수문항</span>
+					</div><!-- //문항 타이틀 -->
+					<div class="sv_item">
+						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<div class="ele_wrap textarea" data-chk-length>
+							<textarea name="" id="" cols="30" rows="10" placeholder="답변을 입력하세요."></textarea>
+							<span class="byte"><span>0</span>/<em class="count">1000</em></span>
+						</div>
+					</div><!-- //문항 옵션 -->
+				</div><!-- //문항 -->
+
+				<div class="sv_list">
+					<div class="sv_tit">
+						5. 전사해지율 대비 250% 이상 해지율 상품대상 사유및 관리 계획서를 첨부해주세요.
+					</div><!-- //문항 타이틀 -->
+					<div class="sv_item">
+						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<a href="#" class="btn line02">파일양식 다운로드</a>
+						<div class="filebox" data-file-box="span">
+							<input type="file" id="file01" />
+							<label for="file01">제출 파일 업로드</label>
+							<span></span>
+						</div>
+					</div><!-- //문항 옵션 -->
+				</div><!-- //문항 -->
+
+				<div class="sv_list">
+					<div class="sv_tit">
+						6. 전사해지율 대비 250% 이상 해지율 상품대상 사유및 관리 계획서를 첨부해주세요.
+					</div><!-- //문항 타이틀 -->
+					<div class="sv_item">
+						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<div class="filebox" data-file-box="span">
+							<input type="file" id="file02" />
+							<label for="file02">이미지 업로드</label>
+							<span></span>
+						</div>
+					</div><!-- //문항 옵션 -->
+				</div><!-- //문항 -->
+
+			</div><!-- //설문 문항 영역 -->
+		</div>
+
+		<div class="btnbox">
+			<div class="fr">
+				<a href="#" class="btn confirm">다음</a>
+			</div>
+		</div><!-- //Button -->
+
+		<!-- <div class="btnbox">
+			<div class="fl">
+				<a href="#" class="btn">이전</a>
+			</div>
+
+			<div class="fr">
+				<a href="#" class="btn confirm">다음</a>
+			</div>
+		</div> --><!-- //Button -->
+
+		<!-- <div class="btnbox">
+			<div class="fl">
+				<a href="#" class="btn">이전</a>
+			</div>
+		
+			<div class="fr">
+				<a href="#" class="btn confirm">제출</a>
+			</div>
+		</div> --><!-- //Button -->
+	</div><!-- //Container -->
+</div>
+</body>
+</html>

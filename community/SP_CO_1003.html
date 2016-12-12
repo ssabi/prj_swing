@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>대상선택 &lt; COMMUNITY &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$("#jstree").jstree();
+	$("#jstree01").jstree({'plugins':["wholerow","checkbox"]});
+});
+</script>
+</head>
+<body>
+<!-- //920x611 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>대상선택</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div>
+	<div id="pop_container">
+		<div class="target_wrap">
+			<div class="group_box">
+				<div class="top">
+					<strong>주소록/조직/사용자 그룹</strong>
+				</div>
+				<div class="con">
+					<div id="jstree">
+						<ul>
+							<li><a href="#">주소록</a>
+								<ul>
+									<li><a href="#">My 주소록</a>
+										<ul>
+											<li><a href="">Sales</a></li>
+											<li><a href="">강남/강북</a></li>
+										</ul>
+									</li>
+									<li><a href="#">팀 공유주소록</a>
+										<ul>
+											<li><a href="#">상품 공지 그룹</a></li>
+											<li><a href="#">설문-수도권 담당자</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">조직</a>
+								<ul>
+									<li><a href="#">조직01</a></li>
+									<li><a href="#">조직02</a></li>
+								</ul>
+							</li>
+							<li><a href="#">사용자그룹</a>
+								<ul>
+									<li><a href="#">사용자그룹01</a></li>
+									<li><a href="#">사용자그룹02</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- //주소록/조직/사용자 그룹 -->
+			<div class="member_box">
+				<div class="top">
+					<strong>구성원</strong>
+				</div>
+				<div class="sch">
+					<form action="#" method="post">
+						<div class="insch">
+							<input type="text" placeholder="구성원명 or ID" />
+							<input type="image" class="submit" src="/resource/images/common/ico_search14x14.png" alt="검색" />
+						</div>
+						<input type="checkbox" name="" id="targetAll" /><label for="targetAll">전체</label>
+					</form>
+				</div><!-- //구성원 검색 -->
+				<div class="con">
+					<div id="jstree01">
+						<ul>
+							<li><a href="#">[주소록] Sales(12)</a>
+								<ul>
+									<li><a href="#">홍길동 (UK12, 마케팅 일이삼사오육칠팔)</a></li>
+									<li><a href="#">홍길동 (UK12, 마케팅 일이삼사오육칠팔)</a></li>
+									<li><a href="#">홍길동 (UK12, 마케팅 일이삼사오육칠팔)</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+<!-- 
+					검색 결과
+					<ul>
+						<li><a href="#">[사용자 그룹] 대리점</a></li>
+						<li><a href="#">홍길동 (UK12, 마케팅 일이삼사오육칠팔)</a></li>
+						<li><a href="#">[사용자 그룹] 대리점</a></li>
+						<li><a href="#">[사용자 그룹] 대리점</a></li>
+						<li><a href="#">홍길동 (UK12, 마케팅 일이삼사오육칠팔)</a></li>
+					</ul>
+ -->
+				</div>
+			</div><!-- //구성원 -->
+			<div class="ctrl">
+				<div>
+					<a href="#" class="next"><img src="/resource/images/common/page_next.png" alt="오른쪽으로"></a>
+					<a href="#" class="prev"><img src="/resource/images/common/page_prev.png" alt="왼쪽으로"></a>
+				</div>
+			</div>
+			<div class="target_box">
+				<div class="top">
+					<strong>게시(배포) 대상</strong>
+				</div>
+				<div class="con">
+					<ul>
+						<li><input type="checkbox" name="" id="rst01" /><label for="rst01">&nbsp;</label><i></i><a href="#">[주소록] Sales</a></li>
+						<li><input type="checkbox" name="" id="rst02" /><label for="rst02">&nbsp;</label><i></i><a href="#">[조직] 강동 마케팅 팀</a></li>
+						<li><input type="checkbox" name="" id="rst03" /><label for="rst03">&nbsp;</label><i></i><a href="#">[사용자그룹] 대리점</a></li>
+						<li><input type="checkbox" name="" id="rst04" /><label for="rst04">&nbsp;</label><a href="#">홍길동 (UK12, 수도권마케팅본부)</a></li>
+					</ul>
+				</div>
+			</div><!-- //게시(배포) 대상 -->
+		</div>
+
+		<div class="btnbox">
+			<a href="#" class="btn confirm">확인</a>
+			<a href="#" class="btn" data-pop-close="popup">취소</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

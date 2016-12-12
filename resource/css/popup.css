@@ -1,0 +1,153 @@
+/* Popup Layout */
+#pop_wrap{width:100%}
+/* #pop_head{display:table;position:relative;width:100%;height:67px;background-color:#71a4c3;vertical-align:middle} */
+#pop_head{display:none}
+#pop_container{padding:40px}
+
+/* Popup Header */
+#pop_head strong{display:table-cell;padding-left:22px;margin-bottom:1px;font-weight:normal;font-size:24px;line-height:30px;color:#fff;vertical-align:middle}
+#pop_head .close{display:block;overflow:hidden;position:absolute;right:15px;top:15px;padding:10px;width:17px;height:17px;background:url(/resource/images/common/close17x17.png) no-repeat 10px 10px;text-indent:-9999px}
+
+/* Popup Container */
+/* 대상설정 */
+.target_box a{transition:all 0s ease 0s !important}
+
+.target_wrap{overflow:hidden;width:840px}
+.target_wrap .group_box, .target_wrap .member_box, .target_wrap .target_box, .target_wrap .ctrl{overflow:hidden;float:left;height:402px;border:1px solid #b3b3b3}
+.target_wrap .group_box{width:269px}
+.target_wrap .member_box{width:269px;margin-left:-1px}
+.target_wrap .target_box{width:239px}
+.target_wrap .ctrl{position:relative;width:58px;border:0;text-align:center}
+.target_wrap .ctrl>div{position:absolute;left:0;top:50%;width:100%;margin-top:-39px}
+.target_wrap .ctrl a{display:inline-block;width:36px;height:36px;line-height:36px;border:1px solid #b3b3b3;text-align:center}
+.target_wrap .ctrl a + a{margin-top:5px}
+.target_wrap .top{padding:0 20px;height:45px;border-bottom:1px solid #b3b3b3}
+.target_wrap .top strong{display:block;line-height:45px;font-weight:bold;font-size:15px;color:#333}
+.target_wrap .con{padding:11px 20px 20px;height:325px;overflow-y:auto}
+.target_wrap .member_box .con{height:290px}
+.target_wrap .sch{overflow:hidden;height:34px;border-bottom:1px solid #b3b3b3}
+.target_wrap .sch .insch{float:left;padding:0 0 0 20px}
+.target_wrap .sch .insch input, .target_wrap .sch .insch .submit{float:left}
+.target_wrap .sch .insch input[type=text]{padding:0;width:139px;height:34px;line-height:34px;border:0}
+.target_wrap .sch .insch .submit{padding:10px;border:0;background:none}
+.target_wrap .sch input[type=checkbox]{position:absolute;left:-9999px}
+.target_wrap .sch input[type=checkbox] + label{display:inline-block;position:relative;float:left;margin:10px 0 10px 11px;padding-left:22px;height:14px;line-height:14px;background:url(/resource/images/common/chkbox14x14.png) no-repeat left top;cursor:pointer}
+.target_wrap .sch input[type=checkbox] + label:before{content:"";position:absolute;left:-11px;top:0;border-left:1px solid #b3b3b3;height:14px}
+.target_wrap .sch input[type=checkbox]:checked + label{background-position:0 -14px}
+/*
+.target_wrap ul{position:relative;overflow:hidden;margin-left:-5px;padding:10px 0 20px}
+.target_wrap ul:after{display:none;content:'';position:absolute;left:-20px;top:-5px;bottom:7px;border-left:1px solid #858585}
+.target_wrap ul.tree li{position:relative;padding-left:24px;padding-top:10px}
+.target_wrap ul.tree li:first-child{}
+.target_wrap ul.tree li:before{content:'';position:absolute;left:-15px;top:0;height:100%;border-left:1px solid #858585;z-index:-1}
+.target_wrap ul.tree li:after{content:'';position:absolute;left:-15px;top:20px;width:100%;border-top:1px solid #858585;z-index:-1}
+.target_wrap ul.tree li:first-child:before{top:0}
+.target_wrap ul.tree li:last-child:before{height:21px}
+.target_wrap ul.tree li i{display:inline-block;position:absolute;left:0;top:10px;width:24px;height:18px;padding-bottom:5px;background:#fff url(../images/common/folder19x18.png) no-repeat 5px top;vertical-align:middle;z-index:10;cursor:pointer;box-shadow:inset 0 -5px 0 #fff}
+.target_wrap ul.tree li.open>i{background-position:5px -18px}
+.target_wrap ul.tree li a{display:block;padding-left:10px;line-height:18px;background-color:#fff}
+.target_wrap ul.tree ul{display:none;overflow:visible;padding:0;margin-left:5px}
+.target_wrap ul.tree li.on a, .target_wrap ul.tree li a.on, .target_wrap ul.tree li a:hover{color:#ff3b57}
+.target_wrap ul.tree ul ul ul ul li i{background-position:5px -36px}
+*/
+.target_wrap .member_box #srcResult ul{position:relative;overflow:visible;margin:8px 0 20px 0}
+.target_wrap .member_box #srcResult ul:after{display:none;content:'';position:absolute;left:37px;top:23px;bottom:8px;border-left:1px solid #858585}
+.target_wrap .member_box #srcResult ul li{position:relative;margin-top:14px}
+.target_wrap .member_box #srcResult ul li:first-child{margin-top:0}
+.target_wrap .member_box #srcResult ul li input[type=checkbox]{position:absolute;left:-9999px}
+.target_wrap .member_box #srcResult ul li input[type=checkbox] + label{display:inline-block;position:static;left:0;top:0;padding-left:24px;height:14px;line-height:14px;background:#fff url(/resource/images/common/chkbox14x14.png) no-repeat 0 top;cursor:pointer}
+.target_wrap .member_box #srcResult ul li input[type=checkbox]:checked + label{background-position:0 -14px}
+.target_wrap .member_box #srcResult ul li i{display:inline-block;margin:0 10px -2px 0;width:19px;height:18px;background:#fff url(/resource/images/common/folder19x18.png) no-repeat left -18px;vertical-align:middle;z-index:10;cursor:pointer}
+.target_wrap .member_box #srcResult ul li i.basic{background-position:0 -36px}
+.target_wrap .member_box #srcResult ul li a{display:inline-block;overflow:hidden;padding-left:28px;line-height:20px;background-color:#fff;vertical-align:middle}
+.target_wrap .member_box #srcResult ul ul{margin:3px 0 0 0;padding:0 0 0 23px}
+.target_wrap .member_box #srcResult ul ul:after{display:none}
+.target_wrap .member_box #srcResult ul ul li{padding:1px 0 5px}
+.target_wrap .member_box #srcResult ul ul li a{display:block;padding-left:28px}
+.target_wrap .member_box #srcResult ul ul li:before{content:"";position:absolute;left:-14px;top:2px;height:100%;border-left:1px solid #858585;z-index:-1}
+.target_wrap .member_box #srcResult ul ul li:after{content:"";position:absolute;left:-14px;top:12px;width:100%;border-top:1px solid #858585;z-index:-1}
+.target_wrap .member_box #srcResult ul ul li input[type=checkbox]{position:absolute;left:-9999px}
+.target_wrap .member_box #srcResult ul ul li input[type=checkbox] + label{display:inline-block;position:absolute;left:0;top:4px;width:21px;height:14px;background:#fff url(/resource/images/common/chkbox14x14.png) no-repeat 6px top;cursor:pointer}
+.target_wrap .member_box #srcResult ul ul li input[type=checkbox]:checked + label{background-position:6px -14px}
+.target_wrap .member_box #srcResult ul ul li:last-child:before{height:11px}
+/**/
+.target_wrap .member_box .desc{margin:13px 0 16px;line-height:22px;color:#666}
+.target_wrap .target_box ul{position:relative;overflow:visible;margin:16px 0 20px;padding:0}
+.target_wrap .target_box ul li{position:relative;margin-top:4px;line-height:20px;padding-left:22px}
+.target_wrap .target_box ul li:first-child{margin-top:0}
+.target_wrap .target_box ul li input[type=checkbox]{position:absolute;left:-9999px}
+.target_wrap .target_box ul li input[type=checkbox] + label{display:inline-block;position:absolute;left:0;top:6px;width:21px;height:14px;background:#fff url(/resource/images/common/chkbox14x14.png) no-repeat 0 0;cursor:pointer}
+.target_wrap .target_box ul li input[type=checkbox]:checked + label{background-position:0 -14px}
+.target_wrap .target_box ul li i{display:inline-block;margin:0 10px -2px 0;width:19px;height:18px;background:#fff url(/resource/images/common/folder19x18.png) no-repeat left -36px;vertical-align:middle}
+.target_wrap .target_box ul li a{display:inline-block;overflow:hidden;vertical-align:middle}
+.target_wrap .target_box .con{height:336px;padding-top:0}
+
+.incon .target_wrap .group_box{width:386px}
+.incon .target_wrap .member_box{width:387px}
+.incon .target_wrap .sch .insch input[type=text]{width:257px}
+/* .incon .managebox .tree_menu{margin:0 20px 20px} */
+
+#pop_container .tbl_wrap{margin-top:0}
+#pop_container .tbl_list.preview{margin-top:-20px;border-top:0}
+#pop_container .tbl_write{border-top:0}
+#pop_container .tbl_write tr:first-child th, #pop_container .tbl_write tr:first-child td{padding-top:0}
+#pop_container .tbl_write tr:last-child th, #pop_container .tbl_write tr:last-child td{padding-bottom:20px}
+#pop_container .tbl_write .desc{padding:3px 0 35px;font-size:15px;line-height:26px;text-align:center}
+#pop_container .tbl_write .desc span{display:block}
+
+/* 커뮤니티 가입신청 팝업 */
+.join_req{margin:-7px 0 0;padding-bottom:20px;line-height:20px;border-bottom:1px solid #b3b3b3}
+.join_req dt{font-weight:bold;font-size:17px;line-height:26px}
+.join_req dd{padding-top:12px}
+.join_req ul{overflow:hidden}
+.join_req ul li{float:left}
+.join_req ul li.date{float:right}
+.join_req .ele_wrap{padding-right:42px;margin-top:5px}
+.join_req .ele_wrap textarea{padding:14px 20px;width:100%;line-height:22px;height:54px}
+
+/* 스크랩 - 분류관리 */
+.class_mng{padding-bottom:20px;border-bottom:1px solid #b3b3b3}
+.class_mng p{position:relative;padding:0 54px 0 20px}
+.class_mng p + p{margin-top:10px}
+.class_mng p input[type=text]{width:100%}
+.class_mng p.chklen{padding-right:104px}
+.class_mng p.chklen input[type=text]{padding-right:60px}
+.class_mng p a{display:block;overflow:hidden;position:absolute;right:6px;top:50%;margin-top:-11px;width:22px;height:22px;text-indent:-9999px}
+.class_mng p a.del{background:#f8d6da url(/resource/images/common/close9x8.png) no-repeat center 7px}
+.class_mng p a.add{background:#e2e2e2 url(/resource/images/common/ico_plus10x10.png) no-repeat center center}
+.class_mng div{position:relative;margin-top:-10px;padding:0 20px;min-height:34px;line-height:34px}
+.class_mng div + div{margin-top:10px}
+.class_mng .byte{right:48px;top:0;line-height:32px}
+.class_mng div input[type=radio]{position:absolute;left:-9999px}
+.class_mng div input[type=radio] + label{display:block;position:relative;padding-left:23px;line-height:34px;cursor:pointer}
+.class_mng div input[type=radio] + label:before{content:'';display:block;position:absolute;left:0;top:10px;width:16px;height:16px;background:url(/resource/images/common/radio16x16.png) no-repeat left top;z-index:10}
+.class_mng div input[type=radio]:checked + label:before{background-position:0 -16px}
+.class_mng div input[type=text]{width:100%}
+.class_mng div p{padding:0 22px 0 23px}
+
+/* Popup Content Title */
+.ptit{position:relative;padding-bottom:15px;margin:-5px 0 0;border-bottom:1px solid #b3b3b3}
+.ptit.hidden_line{border-bottom:0}
+.ptit strong{display:block;font-weight:normal;font-size:18px;line-height:22px;letter-spacing:-0.05em;color:#333}
+
+/* 약관동의 */
+.termbox{overflow:hidden;margin-top:30px;width:893px;border:1px solid #b3b3b3;background-color:#f7f7f7}
+.termbox .scrollbox{overflow:hidden;overflow-y:auto;height:243px;background-color:#fff}
+.termbox .scrollbox>div{padding:20px;line-height:24px;letter-spacing:-0.05em}
+.termbox .scrollbox strong{display:block;margin-top:-2px}
+.termbox .scrollbox p{}
+.termbox .scrollbox strong + p{margin-top:6px}
+.termbox .scrollbox p + p{margin-top:24px}
+/* 개인정보 취급 방침 */
+.termbox.privacy_type{margin-top:0;border-top-color:#000}
+.termbox.privacy_type .scrollbox{height:487px}
+.termbox.privacy_type .scrollbox>div{padding:30px}
+.termbox.privacy_type .scrollbox em{display:block;margin-top:-6px;font-weight:bold;font-size:16px;color:#333}
+.termbox.privacy_type .scrollbox strong{margin-top:10px}
+.termbox.privacy_type .scrollbox p{padding-left:10px}
+.termbox.privacy_type .scrollbox p + strong{margin-top:28px}
+/* 도움말 */
+.help_box{position:relative;width:893px;height:530px;border:1px solid #b3b3b3;border-top-color:#000}
+.help_list{overflow:hidden;overflow-y:auto;position:absolute;left:0;top:0;width:232px;height:100%;border-right:1px solid #b3b3b3}
+.help_list>div{padding:20px}
+.help_cont{margin-left:233px}

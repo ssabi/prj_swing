@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<title>도움말 &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<link rel="stylesheet" href="/resource/css/mq.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$("#helpJsTree").jstree();
+});
+</script>
+</head>
+<body>
+<!-- //Popup size : 975x760 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>도움말</strong>
+		<a href="#" class="close">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+
+		<div class="help_box">
+			<div class="help_list">
+				<div>
+					<div id="helpJsTree">
+						<ul>
+							<li><a href="#">파트너 가입</a>
+								<ul>
+									<li><a href="#">가입하기</a></li>
+									<li><a href="#">개인정보 관리</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Notice</a>
+								<ul>
+									<li><a href="#">등록하기</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="help_cont">
+				
+			</div>
+		</div>
+
+		<div class="btnbox">
+			<a href="#" class="btn">닫기</a>
+		</div><!-- //Button -->
+
+	</div><!-- //Container -->
+</div>
+</body>
+</html>

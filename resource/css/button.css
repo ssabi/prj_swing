@@ -1,0 +1,116 @@
+/* Button - Box */
+.btnbox{overflow:hidden;margin-top:20px;text-align:center}
+.btn{display:inline-block;padding:0 10px;min-width:72px;height:40px;line-height:40px;border:0;background-color:#e2e2e2;color:#454545;text-align:center;vertical-align:middle;/* transition:all 0.3s ease */}
+.btn.confirm{background-color:#ff3b57;color:#fff}
+.btn:hover{background-color:#c0c0c0}
+.btn.active, .btn:active{background-color:#ff3b57;color:#fff}
+.btn.confirm:hover{background-color:#d9324a}
+.btn.active.confirm, .btn.confirm:active{background-color:#c01623}
+/* Button - Line */
+.btn.line{display:inline-block;padding:12px 10px;min-width:72px;height:auto;min-height:22px;line-height:20px;color:#666;border:1px solid #d2d2d2;background-color:#fff}
+.btn.line:hover{background-color:#e6e6e6}
+.btn.line.active, .btn.line:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}
+
+/* 공지작성 */
+.btn.line.add_note{background-color:#e2e2e2;border:1px solid #b3b3b3}
+.btn.line.add_note:hover{background-color:#c0c0c0}
+.btn.line.add_note span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.add_note span:before{content:'';position:absolute;left:0;top:0;width:18px;height:19px;background:url(/resource/images/common/ico_noti.png) no-repeat left top}
+.btn.line.active.add_note, .btn.line.add_note:active{border-color:#ff3b57;background-color:#ff3b57}
+.btn.line.active.add_note span:before, .btn.line.add_note:active span:before{background-position:0 -19px}
+/* 커뮤니티 가입신청 */
+.btn.line.comm_join{background-color:#e2e2e2;border:1px solid #b3b3b3}
+.btn.line.comm_join:hover{background-color:#c0c0c0}
+.btn.line.comm_join span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.comm_join span:before{content:'';position:absolute;left:0;top:1px;width:18px;height:19px;background:url(/resource/images/common/ico_join.png) no-repeat left top}
+.btn.line.active.comm_join, .btn.line.comm_join:active{border-color:#ff3b57;background-color:#ff3b57}
+.btn.line.active.comm_join span:before, .btn.line.comm_join:active span:before{background-position:0 -19px}
+/* 커뮤니티 관리 */
+.btn.line.comm_mng{background-color:#e2e2e2;border:1px solid #b3b3b3}
+.btn.line.comm_mng:hover{background-color:#c0c0c0}
+.btn.line.comm_mng span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.comm_mng span:before{content:'';position:absolute;left:0;top:2px;width:18px;height:18px;background:url(/resource/images/common/ico_mng.png) no-repeat left top}
+.btn.line.active.comm_mng, .btn.line.comm_mng:active{border-color:#ff3b57;background-color:#ff3b57}
+.btn.line.active.comm_mng span:before, .btn.line.comm_mng:active span:before{background-position:0 -18px}
+/* 커뮤니티 개설신청 */
+.btn.line.comm_req span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.comm_req span:before{content:'';position:absolute;left:0;top:0;width:19px;height:21px;background:url(/resource/images/common/ico_cmm.png) no-repeat left top}
+.btn.line.active.comm_req span:before, .btn.line.comm_req:active span:before{background-position:0 -21px}
+/* 커뮤니티 돌아가기 */
+.btn.line.comm_return span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.comm_return span:before{content:'';position:absolute;left:0;top:4px;width:18px;height:16px;background:url(/resource/images/common/ico_return.png) no-repeat left top}
+.btn.line.active.comm_return span:before, .btn.line.comm_return:active span:before{background-position:0 -16px}
+/* 커뮤니티 탈퇴 */
+.btn.line.comm_drop{position:absolute;left:20px;right:20px;bottom:10px;border:0;background-color:transparent}
+.btn.line.comm_drop span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.comm_drop span:before{content:'';position:absolute;left:0;top:2px;width:19px;height:17px;background:url(/resource/images/common/ico_out.png) no-repeat left top}
+/* .btn.line.active.comm_drop span:before, .btn.line.comm_drop:active span:before{background-position:0 -17px} */
+.btn.line.active.comm_drop, .btn.line.comm_drop:active{color:#4c4c4c}
+.btn.line.active.comm_drop span:before, .btn.line.comm_drop:active span:before{background-position:0 0}
+/* 설문관리 */
+.btn.survey{padding:0 20px;vertical-align:middle}
+.btn.survey span{position:relative;padding-left:26px}
+.btn.survey span:before{content:'';position:absolute;left:0;top:1px;width:18px;height:19px;background:url(/resource/images/common/ico_survey_mng.png) no-repeat left top}
+.btn.survey.active span:before, .btn.survey:active span:before{background-position:0 -19px}
+/* 설문 돌아가기 */
+.btn.line.mypage span{display:inline-block;position:relative;padding-left:26px;cursor:pointer}
+.btn.line.mypage span:before{content:'';position:absolute;left:0;top:0;top:1px;width:16px;height:18px;background:url(/resource/images/common/ico_survey.png) no-repeat left top}
+.btn.line.active.mypage span:before, .btn.line.mypage:active span:before{background-position:0 -18px}
+
+/* Table Button */
+.tbl_wrap .btn{display:inline-block;padding:0 10px;width:auto;min-width:51px;height:28px;line-height:28px;border:1px solid #b3b3b3}
+.tbl_wrap .btn.confirm{border:1px solid #cf3046}
+.tbl_wrap .btn:hover, .tbl_wrap .btn:focus{text-decoration:none}
+/*
+.tbl_wrap .btn{display:inline-block;padding:0 5px;width:auto;min-width:61px;height:28px;line-height:28px;border:1px solid #b3b3b3;background-color:#e2e2e2;color:#454545;vertical-align:middle;text-align:center}
+.tbl_wrap .btn:active{border-color:#ff3b57}
+.tbl_wrap .btn.disabled{cursor:default;border:1px solid #d9d9d9;background-color:#e2e2e2;color:#999}
+.tbl_wrap .btn.confirm{border:1px solid #cf3046;background-color:#d9324a}
+.tbl_wrap .btn.confirm:hover, .tbl_wrap .btn.confirm:focus{border-color:#d9324a}
+.tbl_wrap .btn.confirm:active{border-color:#c01623}
+*/
+.tbl_list tbody .btn{min-width:53px;height:26px;line-height:26px;padding:0 5px;border:1px solid #b3b3b3;background-color:transparent;border-radius:3px}
+.tbl_list tbody .btn:hover{border-color:#d2d2d2;background-color:#e6e6e6}
+.tbl_list tbody .btn:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}
+
+.btn.line02{display:inline-block;padding:0 10px;min-width:72px;height:auto;min-height:0;height:32px;line-height:32px;color:#666;border:1px solid #b3b3b3}
+.btn.line02.on, .btn.line02.active, .btn.line02:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}
+button.btn, button.btn.line, button.btn.line02{min-width:92px}
+button.btn.line{min-height:22px;line-height:22px}
+button.btn.line02{height:34px;line-height:0}
+
+/* Button - Line+Box */
+.submit{border:1px solid #b3b3b3;background-color:#e2e2e2;cursor:pointer;/* transition:all 0.3s ease */}
+.submit:hover{background-color:#c0c0c0}
+.submit:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}
+
+/* Paging */
+.paging{overflow:hidden;margin-top:20px}
+.paging .first, .paging .prev, .paging .next, .paging .last{overflow:hidden;position:relative;text-indent:-9999px}
+.paging .first:active, .paging .prev:active, .paging .next:active, .paging .last:active{position:relative;border-color:#ff3b57;background-color:#ff3b57;z-index:2}
+.paging .first:before, .paging .prev:before, .paging .next:before, .paging .last:before{content:'';display:block;position:absolute;left:50%;top:50%;margin-top:-5px;height:11px;background:url(/resource/images/common/icon.png) no-repeat left top}
+.paging .first:before, .paging .last:before{width:11px;margin-left:-6px}
+.paging .prev:before, .paging .next:before{width:6px;margin-left:-3px}
+.paging .first:before{background-position:-81px 0}
+.paging .prev:before{background-position:-102px 0}
+.paging .next:before{background-position:-118px 0}
+.paging .last:before{margin-left:-5px;background-position:-134px 0}
+.paging .first:active:before{background-position:0 -113px}
+.paging .prev:active:before{background-position:-21px -113px}
+.paging .next:active:before{background-position:-37px -113px}
+.paging .last:active:before{background-position:-53px -113px}
+.paging>div{position:relative;left:-50%;float:right}
+.paging>div.mpage{display:none}
+.paging a, .paging span{position:relative;left:50%;float:left;text-align:center}
+.paging a{display:inline-block;width:36px;height:36px;line-height:36px;border:1px solid #b3b3b3;vertical-align:middle;/* transition:background-color 0.3s ease, color 0.3s ease */}
+.paging a:hover, .paging a:focus{background-color:#e6e6e6}
+.paging a img{vertical-align:baseline;line-height:100%}
+.paging a.prev, .paging a.last{margin-left:-1px}
+.paging span{overflow:hidden;padding:0 13px}
+.paging span a{position:static;width:auto;min-width:22px;padding:0 6px;left:0;float:left;border:0;line-height:38px;background-color:transparent}
+.paging span a.on{border:1px solid #ff3b57;margin:0 7px;min-width:26px;padding:0 5px;line-height:36px;color:#ff3b57}
+.paging span a.on:hover{margin:0 7px;border:1px solid #ff3b57}
+.paging span a.on:active{background-color:#fff;color:#ff3b57}
+.paging span a:link{background-color:transparent}
+.paging span a:hover{min-width:26px;margin:0 -2px;padding:0 5px;border:1px solid #b3b3b3;background-color:transparent;line-height:36px}
+.paging span a:active{border:1px solid #ff3b57;background-color:#ff3b57;color:#fff}

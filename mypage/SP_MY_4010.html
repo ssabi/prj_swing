@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>설문 &lt; MY PAGE &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<!-- //Popup size : 920x611 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>설문 생성</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+		<form action="#">
+			<div class="sv_wrap">
+				<div class="sv_basic">
+					<div class="tbl_wrap tbl_opt">
+						<table class="tbl_write bdr_none">
+							<caption></caption>
+							<colgroup>
+								<col style="width:68px" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">유형</th>
+								<td>
+									<select class="w104">
+										<option value="">설문</option>
+										<option value="">퀴즈</option>
+										<option value="">취합</option>
+									</select>
+
+									<input type="checkbox" name="" id="type01" /><label for="type01">익명</label>
+									<input type="checkbox" name="" id="type02" /><label for="type02">설문 결과 공개</label>
+									<input type="checkbox" name="" id="type03" class="disabled" disabled="disabled" checked="checked" /><label for="type03">모바일</label>
+									<!-- 
+									체크박스 비활성화 : class="disabled" disabled="disabled"
+									체크박스 기본 체크 : checked="checked"
+									-->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td>
+									<div class="ele_wrap limit" data-chk-length>
+										<input type="text" value="" placeholder="설문명을 입력하세요." />
+										<span class="byte"><span>0</span>/<em class="count">126</em></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">설명</th>
+								<td>
+									<div class="ele_wrap">
+										<textarea name="" id="" cols="30" rows="10" placeholder="설문에 대한 설명을 입력하세요."></textarea>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기간</th>
+								<td>
+									<div class="period">
+										<p><input type="text" id="opt_start" readonly="readonly" /></p>
+										<p><input type="text" id="opt_end" readonly="readonly" /></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대상</th>
+								<td>
+									<input type="radio" name="target" id="target01" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"all_hide"}' checked="checked" /><label for="target01">전체</label>
+									<input type="radio" name="target" id="target02" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"show"}' /><label for="target02">주소록에서 선택</label>
+									<input type="radio" name="target" id="target03" data-target-toggle='{"ele":".basic_opt.file","ele02":".basic_opt.target","display":"show"}' /><label for="target03">파일 업로드</label>
+									<div class="basic_opt target">
+										<div class="target_box mt0">
+											<div data-target-box="box01">
+												<span class="target_tag">미디어그룹<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹2<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹3<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹4<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹5<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹6<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹7<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹8<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹9<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹10<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹11<a href="#" class="del"></a></span>
+												<span class="target_tag">미디어그룹12<a href="#" class="del"></a></span>
+											</div>
+											<a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('SP_MY_4012.html', '920', '611', '대상찾기', true, true, true, '', '', '')" class="find_target submit" data-target-box-button="box01">대상찾기</a>
+										</div>
+									</div><!-- //주소록에서 선택 -->
+
+									<div class="basic_opt file">
+										<div>
+											<a href="#" class="btn line02">파일 양식 받기</a>
+											파일양식을 다운받아 형식에 맞게 입력 후 파일을 업로드해주세요
+										</div>
+										<div class="filebox" data-file-box="span">
+											<input type="file" id="file0" /><label for="file0">파일 업로드</label>
+											<span></span>
+										</div>
+									</div><!-- //파일 업로드 -->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">알림</th>
+								<td>
+									<input type="checkbox" name="" id="alarm01" class="disabled" disabled="disabled" /><label for="alarm01">E-Mail</label>
+									<input type="checkbox" name="" id="alarm02" class="disabled" disabled="disabled" /><label for="alarm02">SMS</label>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- //설문 기본 정보 영역 -->
+				<div class="sv_con" id="surveyItem">
+					<!-- 문항 영역 -->
+					
+
+					<!-- //문항 영역 -->
+				</div>
+
+				<div class="sv_ctrl">
+					<div>
+						<input type="radio" name="svctrl" id="svctrl01" value="O" checked="checked" /><label for="svctrl01">단일클릭</label>
+						<input type="radio" name="svctrl" id="svctrl02" value="M" /><label for="svctrl02">다중클릭</label>
+						<input type="radio" name="svctrl" id="svctrl03" value="S" /><label for="svctrl03">단답형</label>
+						<input type="radio" name="svctrl" id="svctrl04" value="E" /><label for="svctrl04">서술형</label>
+						<input type="radio" name="svctrl" id="svctrl05" value="F" /><label for="svctrl05">파일</label>
+						<input type="radio" name="svctrl" id="svctrl06" value="I" /><label for="svctrl06">이미지</label>
+					</div>
+					<a href="#" class="btn line02" id="addSurvey">문항추가</a>
+				</div>
+			</div>
+		</form>
+
+		<div class="btnbox">
+			<div class="fr">
+				<a href="#" class="btn">저장</a>
+				<a href="SP_MY_4011.html" class="btn">미리보기</a>
+				<a href="#" class="btn confirm">배포</a>
+				<a href="#" class="btn" data-pop-close="popup">닫기</a>
+			</div>
+		</div><!-- //Button -->
+	</div><!-- //Container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>커뮤니티 개설 신청 &lt; COMMUNITY &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<!-- //Popup size : 680x588 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>커뮤니티 개설 신청</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+		<div class="tbl_wrap">
+			<form action="#" method="post">
+				<table class="tbl_write">
+					<colgroup>
+						<col style="width:143px" />
+						<col />
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">커뮤니티 유형</th>
+						<td>
+							<select class="w100p">
+								<option value="">업무</option>
+								<option value="">일반</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">개설 커뮤니티명</th>
+						<td>
+							<div class="ele_wrap limit dchk" data-chk-length>
+								<input type="text" placeholder="최소 4byte 이상 입력. 특수문자 입력 불가" />
+								<span class="byte"><span>0</span>/<em class="count">40</em></span>
+
+								<a href="#" class="btn">중복 체크</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="vt">개설목적</th>
+						<td>
+							<div class="vreply_write" data-chk-length>
+								<div class="textarea">
+									<textarea name="" id="reply_con01" cols="30" rows="10"></textarea>
+									<span class="byte"><span>0</span>/<em class="count">200</em></span>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">공개여부</th>
+						<td>
+							<input type="radio" name="public" id="public01" checked="checked" data-target-toggle='{"ele":".join_way","display":"show"}' /><label for="public01">공개</label>
+							<input type="radio" name="public" id="public02" data-target-toggle='{"ele":".join_way","display":"hide"}' /><label for="public02">비공개</label>
+						</td>
+					</tr>
+					<tr class="join_way">
+						<th scope="row">가입방식</th>
+						<td>
+							<input type="radio" name="join" id="join01" checked="checked" /><label for="join01">가입 신청 시 즉시 가입</label>
+							<input type="radio" name="join" id="join02" /><label for="join02">가입 신청 시 승인 후 가입</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="vt">대상선택</th>
+						<td>
+							<div class="target_chk">
+								<input type="radio" name="target" id="t01" class="chk_target" data-target-toggle='{"ele":".target_box", "display":"show"}' checked="checked" /><label for="t01">게시 대상 선택</label>
+								<input type="radio" name="target" id="t02" class="chk_target" data-target-toggle='{"ele":".target_box", "display":"hide"}' /><label for="t02">모든 사용자</label>
+							</div>
+
+							<div class="target_box mt0">
+								<div data-target-box="box01">
+									<span class="target_tag">미디어그룹<a href="#" class="del"></a></span>
+								</div>
+
+								<a href="javascript:void(0);" class="find_target submit" onclick="gf_DialogFrame('SP_CO_1003.html', 920, 541, '대상찾기')" data-target-box-button="box01">대상찾기</a>
+
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</form>
+		</div><!-- //Table Write -->
+
+		<div class="btnbox">
+			<a href="#" class="btn confirm">신청</a>
+			<a href="#" class="btn" data-pop-close="popup">취소</a>
+		</div><!-- //Button -->
+
+	</div><!-- //Container -->
+</div>
+</body>
+</html>

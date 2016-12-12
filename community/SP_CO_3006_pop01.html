@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>메뉴추가 &lt; COMMUNITY &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<!-- //Popup size : 680x755 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>메뉴추가</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+		<div class="tbl_wrap">
+			<form action="#" method="post">
+				<table class="tbl_write">
+					<caption></caption>
+					<colgroup>
+						<col style="width:150px" />
+						<col />
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">메뉴명</th>
+						<td>
+							<div class="ele_wrap limit" data-chk-length="">
+								<input type="text" />
+								<span class="byte"><span>0</span>/<em class="count">40</em></span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="vt">추가옵션</th>
+						<td>
+							<p><input type="radio" name="option" id="opt01" checked="checked" /><label for="opt01">현재 위치의 위에 메뉴 추가</label></p>
+							<p><input type="radio" name="option" id="opt02" /><label for="opt02">현재 위치의 아래에 메뉴 추가</label></p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</form>
+		</div><!-- //Table Write -->
+
+		<div class="btnbox">
+			<a href="#" class="btn confirm">확인</a>
+			<a href="#" class="btn" data-pop-close="popup">취소</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

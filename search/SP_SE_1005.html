@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>SEARCH &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<link rel="stylesheet" href="/resource/css/mq.css">
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="inhead">
+			<h1 class="logo"><a href="#"><img src="/resource/images/common/logo.png" alt="Swing"></a></h1>
+
+			<ul class="tnavi">
+				<li><a href="#" class="top_btn_search"><span>검색</span></a></li>
+				<li><a href="#" class="top_btn_message"><span>To-Do</span></a></li>
+				<li><a href="#" class="top_btn_logout"><span>로그아웃</span></a></li>
+				<!-- 
+				<li><a href="#" class="top_btn_login"><span>로그인</span></a></li>
+				 -->
+				<li><a href="#" class="top_btn_system"><span>시스템맵</span></a></li>
+			</ul>
+
+			<ul class="gnb">
+				<li><a href="#">NOTICE</a></li>
+				<li><a href="#">COMMUNITY</a></li>
+				<li><a href="#">MY PAGE</a></li>
+				<li><a href="#">BOARD</a></li>
+			</ul>
+		</div>
+
+		<!-- 공통 검색 -->
+		<div class="hd_sch">
+			<div>
+				<form action="#">
+					<div class="insch">
+						<input type="text" value="" placeholder="검색어를 입력하세요."  data-auto-comp=".auto_cmp" />
+						<input type="submit" class="submit" value="검색" />
+
+						<!-- 자동완성 기능 -->
+						<div class="auto_cmp">
+							<div>
+								<a href="#"><strong>명의</strong>변경 방법 및 구비서류</a>
+								<a href="#"><strong>명의</strong>도용서비스</a>
+								<a href="#"><strong>명의</strong>도용알람서비스</a>
+								<a href="#"><strong>명의</strong>도용</a>
+								<a href="#"><strong>명의</strong>도용방지</a>
+								<a href="#">변경 방법 <strong>명의</strong></a>
+
+								<div class="auto_cmp_func">
+									<p>
+										<a href="javascript:void(0);">자동완성 끄기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- //자동완성 기능 -->
+
+						<!-- 자동완성 기능을 사용하지 않는 경우 -->
+						<!-- 
+						<div class="auto_cmp">
+							<div>
+								<span>검색어 자동완성 기능을 사용해 보세요.</span>
+
+								<div class="auto_cmp_func">
+									<p>
+										<a href="javascript:void(0);">자동완성 켜기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						-->
+						<!-- //자동완성 기능을 사용하지 않는 경우 -->
+
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- //공통 검색 -->
+	</div><!-- //Header -->
+	<div id="container">
+		<div id="content" class="full">
+			<div class="incon">
+				<!-- Content Start -->
+				<div id="aside">
+					<div>
+						<strong>인기검색어</strong>
+						<ol>
+							<li><span>1</span><a href="#">클럽 T</a></li>
+							<li><span>2</span><a href="#">다셋탑</a></li>
+							<li><span>3</span><a href="#">온가족 무료</a></li>
+							<li><span>4</span><a href="#">번호해제 휴일</a></li>
+							<li><span>5</span><a href="#">기기변경</a></li>
+							<li><span>6</span><a href="#">프리미엄 패스</a></li>
+							<li><span>7</span><a href="#">T 멤버쉽</a></li>
+							<li><span>8</span><a href="#">설현</a></li>
+							<li><span>9</span><a href="#">청구서</a></li>
+							<li><span>10</span><a href="#">캠페인</a></li>
+						</ol>
+					</div>
+				</div><!-- //Side -->
+
+				<div class="sch_wrap">
+					<div class="schbox">
+						<form action="#" method="post">
+							<div class="schbox_basic">
+								<div>
+									<input type="text" value="" data-auto-comp=".auto_cmp" />
+									<input type="submit" class="btn_sch" value="검색" />
+
+									<!-- 자동완성 기능 -->
+									<div class="auto_cmp">
+										<div>
+											<a href="#"><strong>명의</strong>변경 방법 및 구비서류</a>
+											<a href="#"><strong>명의</strong>도용서비스</a>
+											<a href="#"><strong>명의</strong>도용알람서비스</a>
+											<a href="#"><strong>명의</strong>도용</a>
+											<a href="#"><strong>명의</strong>도용방지</a>
+											<a href="#">변경 방법 <strong>명의</strong></a>
+
+											<div class="auto_cmp_func">
+												<p>
+													<a href="javascript:void(0);">자동완성 끄기</a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<!-- //자동완성 기능 -->
+
+									<!-- 자동완성 기능을 사용하지 않는 경우 -->
+									<!-- 
+									<div class="auto_cmp">
+										<div>
+											<span>검색어 자동완성 기능을 사용해 보세요.</span>
+
+											<div class="auto_cmp_func">
+												<p>
+													<a href="javascript:void(0);">자동완성 켜기</a>
+												</p>
+											</div>
+										</div>
+									</div>
+									-->
+									<!-- //자동완성 기능을 사용하지 않는 경우 -->
+								</div>
+								<input type="checkbox" name="" value="" id="insch" /><label for="insch">결과 내 재 검색</label>
+							</div><!-- //검색 -->
+
+							<div class="schbox_opt">
+								<input type="checkbox" name="" value="" id="type01" /><label for="type01">전체</label>
+								<input type="checkbox" name="" value="" id="type02" /><label for="type02">제목</label>
+								<input type="checkbox" name="" value="" id="type03" /><label for="type03">본문</label>
+								<input type="checkbox" name="" value="" id="type04" /><label for="type04">첨부파일</label>
+							</div>
+						</form>
+
+						<div class="related_sch">
+							<dl>
+								<dt>유사검색어</dt>
+								<dd>
+									<a href="#">명의변경 방법 및 구비서류</a>
+									<a href="#">명의변경 방법</a>
+									<a href="#">명의이전</a>
+									<a href="#">구비서류 안내</a>
+									<a href="#">명의변경 대리점</a>
+									<a href="#">명의변경방법</a>
+									<a href="#">부모 명의사용</a>
+									<a href="#">핸드폰 명의변경</a>
+									<a href="#">명의변경 대리점</a>
+									<a href="#">명의변경 방법 문의</a>
+									<a href="#">명의변경 방법 및 구비서류 문의</a>
+
+									<a href="#">명의변경 방법 및 구비서류</a>
+									<a href="#">명의변경 방법</a>
+									<a href="#">명의이전</a>
+									<a href="#">구비서류 안내</a>
+									<a href="#">명의변경 대리점</a>
+									<a href="#">명의변경방법</a>
+									<a href="#">부모 명의사용</a>
+									<a href="#">핸드폰 명의변경</a>
+									<a href="#">명의변경 대리점</a>
+									<a href="#">명의변경 방법 문의</a>
+									<a href="#">명의변경 방법 및 구비서류 문의</a>
+								</dd>
+							</dl>
+							<a href="#" class="more">더보기</a>
+						</div><!-- //연관검색어 -->
+					</div><!-- //검색 폼 -->
+
+					<div class="sub_tab">
+						<ul>
+							<li><a href="SP_SE_1001.html">Swing Portal 검색결과 (82)</a></li>
+							<li class="on"><a href="SP_SE_1005.html">CMS 검색결과 (23)</a></li>
+						</ul>
+					</div><!-- //탭 -->
+
+					<div class="sch_category">
+						<select class="w170">
+							<option>정확도 + 최신순</option>
+							<option>정확도</option>
+							<option>최신순</option>
+						</select>
+					</div>
+
+					<div class="sch_result">
+						<div class="sch_cate">
+							<span>검색결과 (<span class="red02">30</span>건)</span>
+						</div><!-- //검색결과 타이틀 -->
+
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.1</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item01 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.2</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item02 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.3</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item03 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.4</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item04 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.5</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item05 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.6</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item06 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.7</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item07 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.8</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item08 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.9</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item09 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.10</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item10 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.11</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item11 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.12</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item12 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.13</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item13 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.14</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item14 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.15</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item15 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.16</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item16 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.17</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item17 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.18</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item18 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.19</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item19 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.20</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item20 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.21</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item21 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.22</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item22 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.23</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item23 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.24</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item24 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.25</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item25 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.26</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item26 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.27</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item27 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.28</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item28 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.29</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item29 -->
+						<div class="sch_item">
+							<strong class="sch_tit"><a href="#">검색어가 포함된 Notice 제목이 출력됩니다.30</a><span class="date">2016.07.07</span></strong>
+							<div class="sch_con">
+								<p><span class="spotlight">명의변경</span>관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다. 명의변경관련 자료 공지 알립니다. 명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.명의변경관련 자료 공지 알립니다. 기존 자료가 변경되어 다시 확인바랍니다.</p>
+							</div>
+							<p class="location">홈 &gt; <a href="#">Notice</a></p>
+						</div><!-- //item30 -->
+					</div><!-- //검색결과 -->
+
+					<div class="paging">
+						<div>
+							<a href="#" class="first"><img src="/resource/images/common/page_first.png" alt="처음으로"></a>
+							<a href="#" class="prev"><img src="/resource/images/common/page_prev.png" alt="이전으로"></a>
+							<span>
+								<a href="#">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#" class="on">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">7</a>
+								<a href="#">8</a>
+								<a href="#">9</a>
+								<a href="#">10</a>
+							</span>
+							<a href="#" class="next"><img src="/resource/images/common/page_next.png" alt="다음으로"></a>
+							<a href="#" class="last"><img src="/resource/images/common/page_last.png" alt="끝으로"></a>
+						</div>
+
+						<div class="mpage">
+							<a href="#" class="prev"><img src="/resource/images/common/page_prev.png" alt="이전으로"></a>
+							<span>
+								<a href="#">1</a>
+								<a href="#">2</a>
+								<a href="#" class="on">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+							</span>
+							<a href="#" class="next"><img src="/resource/images/common/page_next.png" alt="다음으로"></a>
+						</div>
+					</div><!-- //Pagination -->
+				</div>
+				<!-- //Content End -->
+			</div>
+		</div><!-- //Content -->
+	</div><!-- //Container -->
+
+	<div id="footer">
+		<div class="infoot">
+			<ul>
+				<li><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">도움말</a></li>
+			</ul>
+			<address>서울특별시 중구 을지로 65(을지로2가) SK텔레콤(주) 대표이사/사장 : 장동현</address>
+			<p class="copyright">COPYRIGHT 2017 BY SKTELECOM CO., LTD. ALL RIGHTS RESERVED</p>
+		</div>
+	</div><!-- //Footer -->
+</div><!-- //Wrap -->
+</body>
+</html>

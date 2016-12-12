@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Swing Portal</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+table{border-collapse:collapse;border-spacing:0;border:0 none}
+blockquote,q{quotes: none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+button{border:0 none;background-color:transparent;cursor:pointer}
+a{color:#333;text-decoration:none}
+a:active, a:hover{text-decoration:underline}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+html, body{height:100%}
+img{vertical-align:middle}
+legend, .hide{width:1px;height:1px;line-height:0;position:absolute;left:-5000px;top:-5000px;z-index:-100;text-indent:-2000px;}
+legend{*display:none}
+caption{font-size:0;width:0;height:0;line-height:0;text-indent:-9999px}
+*{-webkit-text-size-adjust:none}
+
+body{overflow-y:scroll;font-size:13px;line-height:20px;font-family:Malgun Gothic, '맑은 고딕', Arial, Dotum, '돋움', sans-serif}
+
+h1{display:block;padding-top:20px;text-align:center;font-size:30px;letter-spacing:0.5em;line-height:40px;font-family:verdana;}
+
+.vm{vertical-align:middle !important}
+
+.gnb_box{background-color:#2e3441}
+.gnb ul{overflow:hidden}
+.gnb ul li{float:left;width:12.5%;font-weight:bold;font-size:14px;line-height:20px;color:#fff;text-align:center}
+.gnb ul li a{display:block;padding:7px 0 8px;color:#fff;border-right:1px solid #20242d}
+.gnb ul li.on a, .gnb ul li a:hover, .gnb ul li a:focus{padding-bottom:5px;border-bottom:3px solid #e60724;text-decoration:none}
+.gnb ul li:first-child a{border-left:1px solid #20242d}
+
+.boxwrap .tbl_box{margin:20px 20px 30px;position:relative;border-top:1px solid #2e3441;border-bottom:1px solid #2e3441}
+.boxwrap .table{width:100%;font-size:12px;text-align:left}
+.boxwrap .table thead th{padding:0 11px;height:38px;font-weight:bold;text-align:center;letter-spacing:-0.025em;color:#3c404a;background:#edeef3;border-bottom:1px solid #e1e2e6}
+.boxwrap .table tbody th, .boxwrap .table tbody td{position:relative;padding:5px 10px;line-height:20px;letter-spacing:-0.025em;color:#3c404a;border-top:1px solid #e1e2e6;border-left:1px solid #e1e2e6;vertical-align:top}
+.boxwrap .table .num{border-left:0}
+.boxwrap .table .al_c{text-align:center}
+.boxwrap .table input[type=text]{vertical-align:top;margin:-7px 0}
+.boxwrap .table input[type=checkbox]{position:absolute;left:-9999px}
+.boxwrap .table input[type=checkbox] + label{display:inline-block;position:relative;margin-top:-4px;width:14px;height:14px;vertical-align:middle;cursor:pointer}
+.boxwrap .table input[type=checkbox]:checked + label{background-position:0 -14px}
+.boxwrap .table a{color:#fb6d07}
+.boxwrap .table .del td{background-color:#eee}
+.boxwrap .table .del td:nth-child(2), .boxwrap .table .del td:nth-child(3), .boxwrap .table .del td:nth-child(4){text-decoration:line-through}
+.boxwrap .table .del a{color:#3c404a}
+</style>
+</head>
+<body>
+<div class="boxwrap">
+	<h1>Swing Portal</h1>
+	<div class="tbl_box">
+		<table class="table">
+			<colgroup>
+				<col style="width:50px">
+				<col style="width:150px" />
+				<col style="width:180px" />
+				<col style="width:180px" />
+				<col style="width:250px" />
+				<col />
+			</colgroup>
+			<thead>
+			<tr>
+				<th scope="col">No.</th>
+				<th scope="col">1Depth</th>
+				<th scope="col">2Depth</th>
+				<th scope="col">화면ID</th>
+				<th scope="col">URL</th>
+				<th scope="col">비고</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td class="num" rowspan="2">00</td>
+				<td rowspan="2">Index</td>
+				<td></td>
+				<td>SP_MA_1001(SKT)</td>
+				<td><a href="./SP_MA_1001.html" target="_blank">SP_MA_1001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>SP_MA_1001(SKB)</td>
+				<td><a href="./SP_MA_1001_skb.html" target="_blank">SP_MA_1001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">01</td>
+				<td rowspan="8">Notice</td>
+				<td></td>
+				<td>SP_NO_1001</td>
+				<td><a href="./notice/SP_NO_1001.html" target="_blank">SP_NO_1001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">02</td>
+				<td></td>
+				<td>SP_NO_1002</td>
+				<td><a href="./notice/SP_NO_1002.html" target="_blank">SP_NO_1002.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">03</td>
+				<td></td>
+				<td>SP_NO_1003</td>
+				<td><a href="./notice/SP_NO_1003.html" target="_blank">SP_NO_1003.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">04</td>
+				<td></td>
+				<td>SP_NO_1004</td>
+				<td><a href="./notice/SP_NO_1004.html" target="_blank">SP_NO_1004.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">05</td>
+				<td></td>
+				<td>SP_NO_1005</td>
+				<td><a href="./notice/SP_NO_1005.html" target="_blank">SP_NO_1005.html</a></td>
+				<td>모바일/팝업</td>
+			</tr>
+			<tr>
+				<td class="num">06</td>
+				<td></td>
+				<td>SP_NO_1006</td>
+				<td><a href="./notice/SP_NO_1006.html" target="_blank">SP_NO_1006.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">07</td>
+				<td></td>
+				<td>SP_NO_1007</td>
+				<td><a href="./notice/SP_NO_1007.html" target="_blank">SP_NO_1007.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">08</td>
+				<td></td>
+				<td>SP_NO_1008</td>
+				<td><a href="./notice/SP_NO_1008.html" target="_blank">SP_NO_1008.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<!-- //Notice -->
+			<tr>
+				<td class="num">09</td>
+				<td rowspan="33">Community</td>
+				<td rowspan="3">홈</td>
+				<td>SP_CO_1001</td>
+				<td>
+					<a href="./community/SP_CO_1001_01.html" target="_blank">SP_CO_1001_01.html</a><br>
+					<a href="./community/SP_CO_1001_02.html" target="_blank">SP_CO_1001_02.html</a><br>
+					<a href="./community/SP_CO_1001_03.html" target="_blank">SP_CO_1001_03.html</a><br>
+					<a href="./community/SP_CO_1001_04.html" target="_blank">SP_CO_1001_04.html</a><br>
+					<a href="./community/SP_CO_1001_pop.html" target="_blank">SP_CO_1001_pop.html</a>
+				</td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">10</td>
+				<td>SP_CO_1002</td>
+				<td><a href="./community/SP_CO_1002.html" target="_blank">SP_CO_1002.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">11</td>
+				<td>SP_CO_1003</td>
+				<td>
+					<a href="./community/SP_CO_1003.html" target="_blank">SP_CO_1003.html</a><br>
+					<a href="./community/SP_CO_1003_1.html" target="_blank">SP_CO_1003_1.html</a><br>
+					<a href="./community/SP_CO_1003_2.html" target="_blank">SP_CO_1003_2.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">12</td>
+				<td rowspan="14">개별 커뮤니티</td>
+				<td>SP_CO_2001</td>
+				<td><a href="./community/SP_CO_2001.html" target="_blank">SP_CO_2001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">13</td>
+				<td>SP_CO_2003</td>
+				<td><a href="./community/SP_CO_2003.html" target="_blank">SP_CO_2003.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">14</td>
+				<td>SP_CO_2004</td>
+				<td><a href="./community/SP_CO_2004.html" target="_blank">SP_CO_2004.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">15</td>
+				<td>SP_CO_2006</td>
+				<td>
+					<a href="./community/SP_CO_2006.html" target="_blank">SP_CO_2006.html</a><br>
+					<a href="./community/SP_CO_2006_1.html" target="_blank">SP_CO_2006_1.html</a><br>
+					<a href="./community/SP_CO_2006_2.html" target="_blank">SP_CO_2006_2.html</a>
+				</td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">16</td>
+				<td>SP_CO_2007</td>
+				<td>
+					<a href="./community/SP_CO_2007_01.html" target="_blank">SP_CO_2007_01.html</a><br>
+					<a href="./community/SP_CO_2007_02.html" target="_blank">SP_CO_2007_02.html</a>
+				</td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">17</td>
+				<td>SP_CO_2008</td>
+				<td><a href="./community/SP_CO_2008.html" target="_blank">SP_CO_2008.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">18</td>
+				<td>SP_CO_2009</td>
+				<td><a href="./community/SP_CO_2009.html" target="_blank">SP_CO_2009.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">19</td>
+				<td>SP_CO_2010</td>
+				<td>
+					<a href="./community/SP_CO_2010_01.html" target="_blank">SP_CO_2010_01.html</a><br>
+					<a href="./community/SP_CO_2010_02.html" target="_blank">SP_CO_2010_02.html</a>
+				</td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">20</td>
+				<td>SP_CO_2011</td>
+				<td><a href="./community/SP_CO_2011.html" target="_blank">SP_CO_2011.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">21</td>
+				<td>SP_CO_2013</td>
+				<td><a href="./community/SP_CO_2013.html" target="_blank">SP_CO_2013.html</a></td>
+				<td>신규 10.04 / 개발파트 전달</td>
+			</tr>
+			<tr>
+				<td class="num">22</td>
+				<td>SP_CO_2014</td>
+				<td><a href="./community/SP_CO_2014.html" target="_blank">SP_CO_2014.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">23</td>
+				<td>SP_CO_2015</td>
+				<td><a href="./community/SP_CO_2015.html" target="_blank">SP_CO_2015.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">24</td>
+				<td>SP_CO_2016</td>
+				<td><a href="./community/SP_CO_2016.html" target="_blank">SP_CO_2016.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">25</td>
+				<td>SP_CO_2017</td>
+				<td><a href="./community/SP_CO_2017.html" target="_blank">SP_CO_2017.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">26</td>
+				<td rowspan="16">개별 커뮤니티 관리</td>
+				<td>SP_CO_3001</td>
+				<td><a href="./community/SP_CO_3001.html" target="_blank">SP_CO_3001.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">27</td>
+				<td>SP_CO_3002</td>
+				<td><a href="./community/SP_CO_3002.html" target="_blank">SP_CO_3002.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">28</td>
+				<td>SP_CO_3003</td>
+				<td><a href="./community/SP_CO_3003.html" target="_blank">SP_CO_3003.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">29</td>
+				<td>SP_CO_3004</td>
+				<td><a href="./community/SP_CO_3004.html" target="_blank">SP_CO_3004.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">30</td>
+				<td>SP_CO_3006</td>
+				<td>
+					<a href="./community/SP_CO_3006_01.html" target="_blank">SP_CO_3006_01.html</a><br>
+					<a href="./community/SP_CO_3006_02.html" target="_blank">SP_CO_3006_02.html</a><br>
+					<a href="./community/SP_CO_3006_pop01.html" target="_blank">SP_CO_3006_pop01.html</a><br>
+					<a href="./community/SP_CO_3006_pop02.html" target="_blank">SP_CO_3006_pop02.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">31</td>
+				<td>SP_CO_3007</td>
+				<td><a href="./community/SP_CO_3007.html" target="_blank">SP_CO_3007.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">32</td>
+				<td>SP_CO_3009</td>
+				<td><a href="./community/SP_CO_3009.html" target="_blank">SP_CO_3009.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">33</td>
+				<td>SP_CO_3010</td>
+				<td><a href="./community/SP_CO_3010.html" target="_blank">SP_CO_3010.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">34</td>
+				<td>SP_CO_3011</td>
+				<td><a href="./community/SP_CO_3011.html" target="_blank">SP_CO_3011.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">35</td>
+				<td>SP_CO_3012</td>
+				<td>
+					<a href="./community/SP_CO_3012.html" target="_blank">SP_CO_3012.html</a><br>
+					<a href="./community/SP_CO_3012_pop.html" target="_blank">SP_CO_3012_pop.html</a>
+				</td>
+				<td>&nbsp;<br>신규 12.07</td>
+			</tr>
+			<tr>
+				<td class="num">36</td>
+				<td>SP_CO_3013</td>
+				<td><a href="./community/SP_CO_3013.html" target="_blank">SP_CO_3013.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">37</td>
+				<td>SP_CO_3014</td>
+				<td><a href="./community/SP_CO_3014.html" target="_blank">SP_CO_3014.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">38</td>
+				<td>SP_CO_3015</td>
+				<td><a href="./community/SP_CO_3015.html" target="_blank">SP_CO_3015.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">39</td>
+				<td>SP_CO_3016</td>
+				<td>
+					<a href="./community/SP_CO_3016.html" target="_blank">SP_CO_3016.html</a><br>
+					<a href="./community/SP_CO_3016_01.html" target="_blank">SP_CO_3016_01.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">40</td>
+				<td>SP_CO_3018</td>
+				<td><a href="./community/SP_CO_3018.html" target="_blank">SP_CO_3018.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">41</td>
+				<td>SP_CO_3019</td>
+				<td><a href="./community/SP_CO_3019.html" target="_blank">SP_CO_3019.html</a></td>
+				<td></td>
+			</tr>
+			<!-- //Community -->
+			<tr>
+				<td class="num">42</td>
+				<td rowspan="32">My Page</td>
+				<td>홈</td>
+				<td>SP_MY_1001</td>
+				<td><a href="./mypage/SP_MY_1001.html" target="_blank">SP_MY_1001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">43</td>
+				<td rowspan="10">쪽지 관리</td>
+				<td>SP_MY_2001</td>
+				<td><a href="./mypage/SP_MY_2001.html" target="_blank">SP_MY_2001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">44</td>
+				<td>SP_MY_2002</td>
+				<td><a href="./mypage/SP_MY_2002.html" target="_blank">SP_MY_2002.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">45</td>
+				<td>SP_MY_2003</td>
+				<td><a href="./mypage/SP_MY_2003.html" target="_blank">SP_MY_2003.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">46</td>
+				<td>SP_MY_2004</td>
+				<td><a href="./mypage/SP_MY_2004.html" target="_blank">SP_MY_2004.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">47</td>
+				<td>SP_MY_2005</td>
+				<td><a href="./mypage/SP_MY_2005.html" target="_blank">SP_MY_2005.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">48</td>
+				<td>SP_MY_2006</td>
+				<td><a href="./mypage/SP_MY_2006.html" target="_blank">SP_MY_2006.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">49</td>
+				<td>SP_MY_2007</td>
+				<td><a href="./mypage/SP_MY_2007.html" target="_blank">SP_MY_2007.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">50</td>
+				<td>SP_MY_2008</td>
+				<td><a href="./mypage/SP_MY_2008.html" target="_blank">SP_MY_2008.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">51</td>
+				<td>SP_MY_2009</td>
+				<td><a href="./mypage/SP_MY_2009.html" target="_blank">SP_MY_2009.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">52</td>
+				<td>SP_MY_2010</td>
+				<td><a href="./mypage/SP_MY_2010.html" target="_blank">SP_MY_2010.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">53</td>
+				<td rowspan="3">스크랩 관리</td>
+				<td>SP_MY_3001</td>
+				<td><a href="./mypage/SP_MY_3001.html" target="_blank">SP_MY_3001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">54</td>
+				<td>SP_MY_3002</td>
+				<td><a href="./mypage/SP_MY_3002.html" target="_blank">SP_MY_3002.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">55</td>
+				<td>SP_MY_3003</td>
+				<td><a href="./mypage/SP_MY_3003.html" target="_blank">SP_MY_3003.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">56</td>
+				<td rowspan="3">설문</td>
+				<td>SP_MY_4001</td>
+				<td><a href="./mypage/SP_MY_4001.html" target="_blank">SP_MY_4001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">57</td>
+				<td>SP_MY_4002</td>
+				<td><a href="./mypage/SP_MY_4002.html" target="_blank">SP_MY_4002.html</a></td>
+				<td>모바일/팝업</td>
+			</tr>
+			<tr>
+				<td class="num">58</td>
+				<td>SP_MY_4003</td>
+				<td><a href="./mypage/SP_MY_4003.html" target="_blank">SP_MY_4003.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">59</td>
+				<td rowspan="9">설문 관리</td>
+				<td>SP_MY_4004</td>
+				<td><a href="./mypage/SP_MY_4004.html" target="_blank">SP_MY_4004.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">60</td>
+				<td>SP_MY_4005</td>
+				<td><a href="./mypage/SP_MY_4005.html" target="_blank">SP_MY_4005.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">61</td>
+				<td>SP_MY_4006</td>
+				<td><a href="./mypage/SP_MY_4006.html" target="_blank">SP_MY_4006.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">62</td>
+				<td>SP_MY_4007</td>
+				<td><a href="./mypage/SP_MY_4007.html" target="_blank">SP_MY_4007.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">63</td>
+				<td>SP_MY_4008</td>
+				<td><a href="./mypage/SP_MY_4008.html" target="_blank">SP_MY_4008.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">64</td>
+				<td>SP_MY_4009</td>
+				<td><a href="./mypage/SP_MY_4009.html" target="_blank">SP_MY_4009.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">65</td>
+				<td>SP_MY_4010</td>
+				<td><a href="./mypage/SP_MY_4010.html" target="_blank">SP_MY_4010.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">66</td>
+				<td>SP_MY_4011</td>
+				<td><a href="./mypage/SP_MY_4011.html" target="_blank">SP_MY_4011.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">67</td>
+				<td>SP_MY_4012</td>
+				<td><a href="./mypage/SP_MY_4012.html" target="_blank">SP_MY_4012.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">68</td>
+				<td rowspan="2">My 요청</td>
+				<td>SP_MY_5001</td>
+				<td><a href="./mypage/SP_MY_5001.html" target="_blank">SP_MY_5001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">69</td>
+				<td>SP_MY_5002</td>
+				<td>
+					<a href="./mypage/SP_MY_5001_대기01.html" target="_blank">SP_MY_5001_대기01.html</a><br>
+					<a href="./mypage/SP_MY_5001_대기02.html" target="_blank">SP_MY_5001_대기02.html</a><br>
+					<a href="./mypage/SP_MY_5001_대기03.html" target="_blank">SP_MY_5001_대기03.html</a><br>
+					<a href="./mypage/SP_MY_5001_승인01.html" target="_blank">SP_MY_5001_승인01.html</a><br>
+					<a href="./mypage/SP_MY_5001_승인02.html" target="_blank">SP_MY_5001_승인02.html</a><br>
+					<a href="./mypage/SP_MY_5001_승인03.html" target="_blank">SP_MY_5001_승인03.html</a><br>
+					<a href="./mypage/SP_MY_5001_반려01.html" target="_blank">SP_MY_5001_반려01.html</a><br>
+					<a href="./mypage/SP_MY_5001_반려02.html" target="_blank">SP_MY_5001_반려02.html</a><br>
+					<a href="./mypage/SP_MY_5001_반려03.html" target="_blank">SP_MY_5001_반려03.html</a>
+				</td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">70</td>
+				<td>주소록</td>
+				<td>SP_MY_6001</td>
+				<td><a href="./mypage/SP_MY_6001.html" target="_blank">SP_MY_6001.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">71</td>
+				<td rowspan="2">개인정보 관리</td>
+				<td>SP_MY_7001</td>
+				<td><a href="./mypage/SP_MY_7001.html" target="_blank">SP_MY_7001.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">72</td>
+				<td>SP_MY_7002</td>
+				<td><a href="./mypage/SP_MY_7002.html" target="_blank">SP_MY_7002.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">73</td>
+				<td>고객정보보호서약</td>
+				<td>SP_MY_8001</td>
+				<td><!-- <a href="./mypage/SP_MY_8001.html" target="_blank"> -->SP_MY_8001.html</a></td>
+				<td></td>
+			</tr>
+			<!-- //My Page -->
+			<tr>
+				<td class="num">74</td>
+				<td rowspan="22">Board</td>
+				<td rowspan="3">세일즈톡</td>
+				<td>SP_BO_1001</td>
+				<td><a href="./board/SP_BO_1001.html" target="_blank">SP_BO_1001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">75</td>
+				<td>SP_BO_1002</td>
+				<td>
+					<a href="./board/SP_BO_1002.html" target="_blank">SP_BO_1002.html</a><br>
+					<a href="./board/SP_BO_1002_pop.html" target="_blank">SP_BO_1002_pop.html</a>
+				</td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">76</td>
+				<td>SP_BO_1003</td>
+				<td>
+					<a href="./board/SP_BO_1003.html" target="_blank">SP_BO_1003.html</a></td>
+				<td></td>
+			</tr>
+			<tr class="del">
+				<td class="num">77</td>
+				<td rowspan="7">통화품질119</td>
+				<td>SP_BO_2001</td>
+				<td><a href="./board/SP_BO_2001.html" target="_blank">SP_BO_2001.html</a></td>
+				<td rowspan="14" class="vm">삭제 10.27</td>
+			</tr>
+			<tr class="del">
+				<td class="num">78</td>
+				<td>SP_BO_2002</td>
+				<td><a href="./board/SP_BO_2002.html" target="_blank">SP_BO_2002.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">79</td>
+				<td>SP_BO_2003</td>
+				<td>
+					<a href="./board/SP_BO_2003.html" target="_blank">SP_BO_2003.html</a><br>
+					<a href="./board/SP_BO_2003_1.html" target="_blank">SP_BO_2003_1.html</a><br>
+					<a href="./board/SP_BO_2003_2.html" target="_blank">SP_BO_2003_2.html</a>
+				</td>
+			</tr>
+			<tr class="del">
+				<td class="num">80</td>
+				<td>SP_BO_2004</td>
+				<td><a href="./board/SP_BO_2004.html" target="_blank">SP_BO_2004.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">81</td>
+				<td>SP_BO_2006</td>
+				<td><a href="./board/SP_BO_2006.html" target="_blank">SP_BO_2006.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">82</td>
+				<td>SP_BO_2007</td>
+				<td><a href="./board/SP_BO_2007.html" target="_blank">SP_BO_2007.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">83</td>
+				<td>SP_BO_2008</td>
+				<td><a href="./board/SP_BO_2008.html" target="_blank">SP_BO_2008.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">84</td>
+				<td rowspan="7">유선품질119</td>
+				<td>SP_BO_3001</td>
+				<td><a href="./board/SP_BO_3001.html" target="_blank">SP_BO_3001.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">85</td>
+				<td>SP_BO_3002</td>
+				<td><a href="./board/SP_BO_3002.html" target="_blank">SP_BO_3002.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">86</td>
+				<td>SP_BO_3003</td>
+				<td>
+					<a href="./board/SP_BO_3003.html" target="_blank">SP_BO_3003.html</a><br>
+					<a href="./board/SP_BO_3003_1.html" target="_blank">SP_BO_3003_1.html</a><br>
+					<a href="./board/SP_BO_3003_2.html" target="_blank">SP_BO_3003_2.html</a>
+				</td>
+			</tr>
+			<tr class="del">
+				<td class="num">87</td>
+				<td>SP_BO_3004</td>
+				<td><a href="./board/SP_BO_3004.html" target="_blank">SP_BO_3004.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">88</td>
+				<td>SP_BO_3006</td>
+				<td><a href="./board/SP_BO_3006.html" target="_blank">SP_BO_3006.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">89</td>
+				<td>SP_BO_3007</td>
+				<td><a href="./board/SP_BO_3007.html" target="_blank">SP_BO_3007.html</a></td>
+			</tr>
+			<tr class="del">
+				<td class="num">90</td>
+				<td>SP_BO_3008</td>
+				<td><a href="./board/SP_BO_3008.html" target="_blank">SP_BO_3008.html</a></td>
+			</tr>
+			<tr>
+				<td class="num">91</td>
+				<td rowspan="5">광고</td>
+				<td>SP_BO_4001</td>
+				<td><a href="./board/SP_BO_4001.html" target="_blank">SP_BO_4001.html</a></td>
+				<td rowspan="5" class="vm">신규 10.27</td>
+			</tr>
+			<tr>
+				<td class="num">92</td>
+				<td>SP_BO_4002</td>
+				<td><a href="./board/SP_BO_4002.html" target="_blank">SP_BO_4002.html</a></td>
+			</tr>
+			<tr>
+				<td class="num">93</td>
+				<td>SP_BO_4003</td>
+				<td><a href="./board/SP_BO_4003.html" target="_blank">SP_BO_4003.html</a></td>
+			</tr>
+			<tr>
+				<td class="num">94</td>
+				<td>SP_BO_4004</td>
+				<td><a href="./board/SP_BO_4004.html" target="_blank">SP_BO_4004.html</a></td>
+			</tr>
+			<tr>
+				<td class="num">95</td>
+				<td>SP_BO_4005</td>
+				<td><a href="./board/SP_BO_4005.html" target="_blank">SP_BO_4005.html</a></td>
+			</tr>
+			<!-- //Board -->
+			<tr>
+				<td class="num">96</td>
+				<td rowspan="6">검색</td>
+				<td></td>
+				<td>SP_SE_1001</td>
+				<td><a href="./search/SP_SE_1001.html" target="_blank">SP_SE_1001.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">97</td>
+				<td></td>
+				<td>SP_SE_1002</td>
+				<td><a href="./search/SP_SE_1002.html" target="_blank">SP_SE_1002.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">98</td>
+				<td></td>
+				<td>SP_SE_1004</td>
+				<td><a href="./search/SP_SE_1004.html" target="_blank">SP_SE_1004.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">99</td>
+				<td></td>
+				<td>SP_SE_1004</td>
+				<td><a href="./search/SP_SE_1004_sp.html" target="_blank">SP_SE_1004.html</a></td>
+				<td>세일즈톡</td>
+			</tr>
+			<tr>
+				<td class="num">100</td>
+				<td></td>
+				<td>SP_SE_1004</td>
+				<td><a href="./search/SP_SE_1004_mv.html" target="_blank">SP_SE_1004.html</a></td>
+				<td>광고</td>
+			</tr>
+			<tr>
+				<td class="num">101</td>
+				<td></td>
+				<td>SP_SE_1005</td>
+				<td><a href="./search/SP_SE_1005.html" target="_blank">SP_SE_1005.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">102</td>
+				<td rowspan="2">Footer</td>
+				<td>개인정보 취급방침</td>
+				<td>SP_FO_1002</td>
+				<td><a href="./common/SP_FO_1002.html" target="_blank">SP_FO_1002.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">103</td>
+				<td>도움말</td>
+				<td>SP_FO_1003</td>
+				<td><a href="./common/SP_FO_1003.html" target="_blank">SP_FO_1003.html</a></td>
+				<td>모바일</td>
+			</tr>
+			<tr>
+				<td class="num">104</td>
+				<td rowspan="2">메일폼</td>
+				<td>SKT</td>
+				<td></td>
+				<td><a href="./common/mail_skt.html" target="_blank">mail_skt.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="num">105</td>
+				<td>SKB</td>
+				<td></td>
+				<td><a href="./common/mail_skb.html" target="_blank">mail_skb.html</a></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

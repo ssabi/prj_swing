@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>설문 &lt; MY PAGE &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+</head>
+<body>
+<!-- //Popup size : 920x611 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>수정하기-[취합]고해지율 상품 대상 사유</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+		<div class="sv_wrap">
+			<div class="sv_basic">
+				<div class="tbl_wrap tbl_opt">
+					<table class="tbl_write bdr_none">
+						<caption></caption>
+						<colgroup>
+							<col style="width:68px" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">유형</th>
+							<td>
+								<select class="w104">
+									<option value="">설문</option>
+									<option value="">퀴즈</option>
+									<option value="">취합</option>
+								</select>
+
+								<input type="checkbox" name="" id="type01" /><label for="type01">익명</label>
+								<input type="checkbox" name="" id="type02" /><label for="type02">설문 결과 공개</label>
+								<input type="checkbox" name="" id="type03" class="disabled" disabled="disabled" checked="checked" /><label for="type03">모바일</label>
+								<!-- 
+								체크박스 비활성화 : class="disabled" disabled="disabled"
+								체크박스 기본 체크 : checked="checked"
+								-->
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>
+								<div class="ele_wrap limit" data-chk-length>
+									<input type="text" value="" placeholder="설문명을 입력하세요." />
+									<span class="byte"><span>0</span>/<em class="count">126</em></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">설명</th>
+							<td>
+								<div class="ele_wrap">
+									<textarea name="" id="" cols="30" rows="10" placeholder="설문에 대한 설명을 입력하세요."></textarea>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">기간</th>
+							<td>
+								<div class="period">
+									<p><input type="text" id="opt_start" readonly="readonly" /></p>
+									<p><input type="text" id="opt_end" readonly="readonly" /></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">대상</th>
+							<td>
+								<input type="radio" name="target" id="target01" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"all_hide"}' checked="checked" /><label for="target01">전체</label>
+								<input type="radio" name="target" id="target02" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"show"}' /><label for="target02">주소록에서 선택</label>
+								<input type="radio" name="target" id="target03" data-target-toggle='{"ele":".basic_opt.file","ele02":".basic_opt.target","display":"show"}' /><label for="target03">파일 업로드</label>
+								<div class="basic_opt target">
+									<div class="target_box mt0">
+										<div data-target-box="box01">
+											<span class="target_tag">미디어그룹<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹2<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹3<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹4<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹5<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹6<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹7<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹8<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹9<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹10<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹11<a href="#" class="del"></a></span>
+											<span class="target_tag">미디어그룹12<a href="#" class="del"></a></span>
+										</div>
+										<a href="javascript:void(0);" class="find_target submit" onclick="gf_DialogFrame('../community/SP_CO_2011.html', 920, 541, '대상찾기')" data-target-box-button="box01">대상찾기</a>
+									</div>
+								</div><!-- //주소록에서 선택 -->
+
+								<div class="basic_opt file">
+									<div>
+										<a href="#" class="btn line02">파일 양식 받기</a>
+										파일양식을 다운받아 형식에 맞게 입력 후 파일을 업로드해주세요
+									</div>
+									<div class="filebox" data-file-box="span">
+										<input type="file" id="file0" /><label for="file0">파일 업로드</label>
+										<span></span>
+									</div>
+								</div><!-- //파일 업로드 -->
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">알림</th>
+							<td>
+								<input type="checkbox" name="" id="alarm01" /><label for="alarm01">E-Mail</label>
+								<input type="checkbox" name="" id="alarm02" /><label for="alarm02">SMS</label>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div><!-- //설문 기본 정보 영역 -->
+			<div class="sv_con" id="surveyItem">
+				<!-- 문항 영역 -->
+				<div class="item">
+					<div class="side">
+						<p>
+							<a href="#" class="item_ctr item_up">위로 이동</a>
+							<a href="#" class="item_ctr item_down">아래로 이동</a>
+						</p>
+						<span class="num">1.</span>
+					</div>
+					<p class="sv_impt"><input type="checkbox" name="" id="svitem1" /><label for="svitem1">필수</label></p>
+					<div class="item_tit" data-chk-length>
+						<input type="text" placeholder="문항을 입력하세요" />
+						<span class="byte"><span>0</span>/<em class="count">126</em></span>
+					</div>
+					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="answer">
+						<p class="default" data-chk-length>
+							<input type="radio" name="single_chk" id="sc01" /><label for="sc01"></label>
+							<input type="text" id="svitem1" placeholder="항목 추가" />
+							<a href="#" class="add_article">추가</a>
+							<span class="byte"><span>0</span>/<em class="count">126</em></span>
+						</p>
+						<!-- 
+						2016-10-26 기타 항목 추가(단일/다중 선택에만)
+						-->
+						<p class="etc" data-chk-length="">
+							<!-- <input type="radio" name="single_chk" id="svitem1_name0-1"><label for="svitem1_name0-1"></label> -->
+							<span class="add_etc" style="display: none;"><a href="#">'기타' 추가</a></span>
+							<input type="text" placeholder="기타 항목 추가" class="disable" disabled="disabled"><a href="#" class="del_article"></a>
+						</p>
+						<!-- //여기까지 -->
+
+					</div>
+					<a href="#" class="btn line02 del_item">문항삭제</a>
+				</div><!-- //Single -->
+
+				<div class="item">
+					<div class="side">
+						<p>
+							<a href="#" class="item_ctr item_up">위로 이동</a>
+							<a href="#" class="item_ctr item_down">아래로 이동</a>
+						</p>
+						<span class="num">2.</span>
+					</div>
+					<p class="sv_impt"><input type="checkbox" name="" id="svitem2" /><label for="svitem2">필수</label></p>
+					<div class="item_tit" data-chk-length>
+						<input type="text" placeholder="문항을 입력하세요" />
+						<span class="byte"><span>0</span>/<em class="count">126</em></span>
+					</div>
+					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="answer">
+						<p class="default" data-chk-length>
+							<input type="checkbox" name="multi_chk" id="mc01" /><label for="mc01"></label>
+							<input type="text" id="svitem2" placeholder="항목 추가" />
+							<a href="#" class="add_article">추가</a>
+							<span class="byte"><span>0</span>/<em class="count">126</em></span>
+						</p>
+						<!-- 
+						2016-10-26 기타 항목 추가(단일/다중 선택에만)
+						-->
+						<p class="etc" data-chk-length>
+							<!-- <input type="checkbox" name="multi_chk" id="mc_etc" /><label for="mc_etc"></label> -->
+							<span class="add_etc"><a href="#">'기타' 추가</a></span>
+						</p>
+						<!-- //여기까지 -->
+					</div>
+					<a href="#" class="btn line02 del_item">문항삭제</a>
+				</div><!-- //multiple -->
+
+				<div class="item">
+					<div class="side">
+						<p>
+							<a href="#" class="item_ctr item_up">위로 이동</a>
+							<a href="#" class="item_ctr item_down">아래로 이동</a>
+						</p>
+						<span class="num">3.</span>
+					</div>
+					<p class="sv_impt"><input type="checkbox" name="" id="svitem3" /><label for="svitem3">필수</label></p>
+					<div class="item_tit" data-chk-length>
+						<input type="text" placeholder="문항을 입력하세요" />
+						<span class="byte"><span>0</span>/<em class="count">126</em></span>
+					</div>
+					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="answer">
+						<div class="chklength" data-chk-length="">
+							<input type="text" value="" placeholder="답변을 입력하세요." />
+							<span class="byte"><span>0</span>/<em class="count">200</em></span>
+						</div>
+					</div>
+					<a href="#" class="btn line02 del_item">문항삭제</a>
+				</div><!-- //short-answer -->
+
+				<div class="item">
+					<div class="side">
+						<p>
+							<a href="#" class="item_ctr item_up">위로 이동</a>
+							<a href="#" class="item_ctr item_down">아래로 이동</a>
+						</p>
+						<span class="num">4.</span>
+					</div>
+					<p class="sv_impt"><input type="checkbox" name="" id="svitem4" /><label for="svitem4">필수</label></p>
+					<div class="item_tit" data-chk-length>
+						<input type="text" placeholder="문항을 입력하세요" />
+						<span class="byte"><span>0</span>/<em class="count">126</em></span>
+					</div>
+					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="answer textarea" data-chk-length>
+						<textarea name="" id="" cols="30" rows="10" placeholder="답변을 입력하세요."></textarea>
+						<span class="byte"><span>0</span>/<em class="count">1000</em></span>
+					</div>
+					<a href="#" class="btn line02 del_item">문항삭제</a>
+				</div><!-- //description -->
+
+				<div class="item">
+					<div class="side">
+						<p>
+							<a href="#" class="item_ctr item_up">위로 이동</a>
+							<a href="#" class="item_ctr item_down">아래로 이동</a>
+						</p>
+						<span class="num">5.</span>
+					</div>
+					<p class="sv_impt"><input type="checkbox" name="" id="svitem5" /><label for="svitem5">필수</label></p>
+					<div class="item_tit" data-chk-length>
+						<input type="text" placeholder="문항을 입력하세요" />
+						<span class="byte"><span>0</span>/<em class="count">126</em></span>
+					</div>
+					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="answer filebox" data-file-box="span">
+						<input type="file" id="file01" /><label for="file01">파일 양식 업로드</label>
+						<span></span>
+					</div>
+					<p class="desc"><span>*</span>제출용 파일 양식을 업로드 하세요.</p>
+					<a href="#" class="btn line02 del_item">문항삭제</a>
+				</div><!-- //file -->
+
+				<div class="item">
+					<div class="side">
+						<p>
+							<a href="#" class="item_ctr item_up">위로 이동</a>
+							<a href="#" class="item_ctr item_down">아래로 이동</a>
+						</p>
+						<span class="num">6.</span>
+					</div>
+					<p class="sv_impt"><input type="checkbox" name="" id="svitem6" /><label for="svitem6">필수</label></p>
+					<div class="item_tit" data-chk-length>
+						<input type="text" placeholder="문항을 입력하세요" />
+						<span class="byte"><span>0</span>/<em class="count">126</em></span>
+					</div>
+					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="answer">
+						<p class="desc"><span>*</span>이미지 업로드 버튼이 설문 대상에게 노출됩니다.</p>
+					</div>
+					<a href="#" class="btn line02 del_item">문항삭제</a>
+				</div><!-- //image -->
+				<!-- //문항 영역 -->
+			</div>
+
+			<div class="sv_ctrl">
+				<div>
+					<input type="radio" name="svctrl" id="svctrl01" value="O" checked="checked" /><label for="svctrl01">단일클릭</label>
+					<input type="radio" name="svctrl" id="svctrl02" value="M" /><label for="svctrl02">다중클릭</label>
+					<input type="radio" name="svctrl" id="svctrl03" value="S" /><label for="svctrl03">단답형</label>
+					<input type="radio" name="svctrl" id="svctrl04" value="E" /><label for="svctrl04">서술형</label>
+					<input type="radio" name="svctrl" id="svctrl05" value="F" /><label for="svctrl05">파일</label>
+					<input type="radio" name="svctrl" id="svctrl06" value="I" /><label for="svctrl06">이미지</label>
+				</div>
+				<a href="#" class="btn line02" id="addSurvey">문항추가</a>
+			</div>
+		</div>
+
+		<div class="btnbox">
+			<div class="fr">
+				<a href="SP_MY_4005.html" class="btn confirm">저장</a>
+				<a href="#" class="btn" data-pop-close="popup">닫기</a>
+			</div>
+		</div><!-- //Button -->
+	</div><!-- //Container -->
+</div>
+</body>
+</html>

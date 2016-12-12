@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<link rel="stylesheet" href="/resource/css/mq.css">
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+<script>
+$(document).ready(function(){
+	//Main Search
+	$(".main_sch label").bind({
+		"click" : function(){
+			$(this).fadeOut('fast');
+
+			$(document).on('mousedown touchstart focusin', function(e){
+				//console.log(e.target);
+				if($(e.target).closest($('.main_sch')).length === 0) {
+					if($(".main_sch input[type=text]").val() == "" || $(".main_sch input[type=text]").val() == null){
+						$(".main_sch label").fadeIn('fast');
+					}
+				}
+			});
+		}
+	});
+});
+</script>
+</head>
+<body class="main">
+
+<div class="sysmap_wrap">
+	<div class="sysmap_bg"></div>
+	<!-- //bg -->
+
+	<div class="sysmap">
+		<div class="systit">
+			<div>
+				<strong>SYSTEM MAP</strong>
+				<a href="#" class="sysmap_close">닫기</a>
+			</div>
+		</div><!-- //system map title -->
+
+		<div class="syscon">
+			<div class="sys_shortcut">
+				<strong>시스템 바로가기</strong>
+				<div class="sysmap_con">
+					<ul>
+						<li><a href="#">정책관리</a></li>
+						<li><a href="#">유선 서비스 신규가입</a></li>
+						<li><a href="#">유선 접수/개통요청 현황</a></li>
+						<li><a href="#">정책관리</a></li>
+						<li><a href="#">정책관리</a></li>
+						<li><a href="#">정책관리</a></li>
+					</ul>
+				</div>
+			</div><!-- //시스템 바로가기 -->
+
+			<div class="sys_support">
+				<strong>업무지원시스템</strong>
+				<div class="sysmap_con">
+					<ul>
+						<li><a href="./list.html">SWING</a></li>
+						<li><a href="http://172.31.164.37:9095/dist_1010/index.html" target="_blank">CMS</a></li>
+						<li><a href="#">CIA</a></li>
+						<li><a href="#">SYSTEM 1</a></li>
+						<li><a href="#">SYSTEM 2</a></li>
+						<li><a href="#">SYSTEM 3</a></li>
+						<li><a href="#">SYSTEM 4</a></li>
+						<li><a href="#">SYSTEM 5</a></li>
+						<li><a href="#">SYSTEM 6</a></li>
+						<li><a href="#">SYSTEM 7</a></li>
+					</ul>
+				</div>
+			</div><!-- //업무지원시스템 -->
+
+			<div class="sys_family">
+				<strong>패밀리 사이트</strong>
+				<div class="sysmap_con">
+					<ul>
+						<li><a href="#">SWING</a></li>
+						<li><a href="#">CMS</a></li>
+						<li><a href="#">CIA</a></li>
+						<li><a href="#">SYSTEM 1</a></li>
+						<li><a href="#">SYSTEM 2</a></li>
+						<li><a href="#">SYSTEM 3</a></li>
+						<li><a href="#">SYSTEM 4</a></li>
+						<li><a href="#">SYSTEM 5</a></li>
+						<li><a href="#">SYSTEM 6</a></li>
+						<li><a href="#">SYSTEM 7</a></li>
+					</ul>
+				</div>
+			</div><!-- //패밀리 사이트 -->
+		</div>
+	</div>
+</div><!-- //System Map -->
+
+<div id="wrap">
+	<div id="header">
+		<div class="todo_wrap show">
+			<div>
+				<strong>안녕하세요. 이설현님,  오늘의 할 일 12건있습니다.</strong>
+				<div class="todo_list_wrap">
+					<div>
+						<ul class="todo_list">
+							<li><a href="#" class="message"><i><img src="/resource/images/common/todo_message.png" alt=""></i><span>쪽지</span><span class="num">9</span></a></li>
+							<li><a href="/mypage/SP_MY_4001.html" class="survey"><i><img src="/resource/images/common/todo_survey.png" alt=""></i><span>설문/취합</span><span class="num">5</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_approval.png" alt=""></i><span>승인</span><span class="num">7</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_voc.png" alt=""></i><span>My VOC</span><span class="num">3</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_cia.png" alt=""></i><span>CIA미비건수</span><span class="num">2</span></a></li>
+
+							<li><a href="#"><i><img src="/resource/images/common/todo_judgment.png" alt=""></i><span>명의도용<br>판정확인</span><span class="num">7</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_refund.png" alt=""></i><span>명의도용<br>과납환불</span><span class="num">3</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_reduction.png" alt=""></i><span>요금감면<br>서류보완</span><span class="num">2</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_return.png" alt=""></i><span>유선반송건수</span><span class="num">7</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_explain.png" alt=""></i><span>소명업무</span><span class="num">7</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_partner.png" alt=""></i><span>파트너관리<br>TO DO</span><span class="num">7</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_contract.png" alt=""></i><span>전자계약</span><span class="num">7</span></a></li>
+							<li><a href="#"><i><img src="/resource/images/common/todo_mortgage.png" alt=""></i><span>담보등록</span><span class="num">7</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!-- //My To Do -->
+
+		<div class="inhead">
+			<h1 class="logo"><a href="#" class="logo_skb"><img src="/resource/images/common/logo_skb.png" alt="SKB"></a></h1>
+
+			<ul class="tnavi">
+				<li><a href="#" class="top_btn_admin"><span>관리자</span></a></li>
+				<!-- 
+				<li><a href="#" class="top_btn_search"><span>검색</span></a></li>
+				-->
+				<li><a href="#" class="top_btn_message on"><span>To-Do</span></a></li>
+				<li><a href="#" class="top_btn_logout"><span>로그아웃</span></a></li>
+				<!-- 
+				<li><a href="#" class="top_btn_login"><span>로그인</span></a></li>
+				 -->
+				<li><a href="#" class="top_btn_system"><span>시스템맵</span></a></li>
+			</ul>
+
+			<ul class="gnb">
+				<li><a href="/notice/SP_NO_1001.html">NOTICE</a></li>
+				<li><a href="/community/SP_CO_1001_01.html">COMMUNITY</a></li>
+				<li><a href="/mypage/SP_MY_1001.html">MY PAGE</a></li>
+				<li><a href="/board/SP_BO_1001.html">BOARD</a></li>
+			</ul>
+
+			<form action="#" method="post">
+				<div class="main_sch">
+					<div>
+						<label for="mtxt"><span>검색어를 입력해 주세요.</span></label>
+						<input type="text" id="mtxt" value=""  data-auto-comp=".auto_cmp" />
+						<input type="submit" class="btn_submit" value="검색" />
+
+						<!-- 자동완성 기능 -->
+						<div class="auto_cmp">
+							<div>
+								<a href="#"><strong>명의</strong>변경 방법 및 구비서류</a>
+								<a href="#"><strong>명의</strong>도용서비스</a>
+								<a href="#"><strong>명의</strong>도용알람서비스</a>
+								<a href="#"><strong>명의</strong>도용</a>
+								<a href="#"><strong>명의</strong>도용방지</a>
+								<a href="#">변경 방법 <strong>명의</strong></a>
+
+								<div class="auto_cmp_func">
+									<p>
+										<a href="javascript:void(0);">자동완성 끄기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- //자동완성 기능 -->
+
+						<!-- 자동완성 기능을 사용하지 않는 경우 -->
+						<!-- 
+						<div class="auto_cmp">
+							<div>
+								<span>검색어 자동완성 기능을 사용해 보세요.</span>
+						
+								<div class="auto_cmp_func">
+									<p>
+										<a href="javascript:void(0);">자동완성 켜기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						-->
+						<!-- //자동완성 기능을 사용하지 않는 경우 -->
+					</div>
+				</div><!-- //Main Search -->
+			</form>
+
+			<div class="popular_word">
+				<ul>
+					<li><a href="#">기기변경</a></li>
+					<li><a href="#">온가족무료</a></li>
+					<li><a href="#">번호해제</a></li>
+					<li><a href="#">다셋탑</a></li>
+					<li><a href="#">프리미엄패스</a></li>
+				</ul>
+			</div><!-- //Popular Search Word -->
+
+			<div class="recom_sys">
+				<ul>
+					<li><a href="#"><span><span>CMS</span></span></a></li>
+					<!-- <li><a href="#"><span><span>SWING</span></span></a></li> -->
+					<li><a href="#"><span><span>유선 서비스 신규가입</span></span></a></li>
+					<li><a href="#"><span><span>USCAN</span></span></a></li>
+					<li><a href="#"><span><span>TISP</span></span></a></li>
+				</ul>
+			</div><!-- //Recommender System -->
+
+		</div>
+	</div><!-- //Header -->
+	<div id="container">
+		<div id="content_main">
+
+			<div class="sort_type">
+				<ul>
+					<li class="on"><a href="#">전체</a></li>
+					<li><a href="#">긴급</a></li>
+					<li><a href="#">중요</a></li>
+					<li><a href="#">일반</a></li>
+				</ul>
+			</div><!-- //Sort -->
+
+			<!-- 
+			긴급 : urgent
+			중요 : important
+			신규 : new
+			-->
+			<div class="list_wrap">
+				<div class="list urgent new">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_urgent">긴급</span>
+							<span class="ico_new">신규</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list urgent new">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_urgent">긴급</span>
+							<span class="ico_new">신규</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list important new">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_important">중요</span>
+							<span class="ico_new">신규</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_general">일반</span>
+							<span class="ico_new">신규</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_general">일반</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_general">일반</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_general">일반</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_general">일반</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list">
+					<a href="#">
+						<span class="badge">
+							<span class="ico_general">일반</span>
+						</span>
+						<strong>[시스템]망분리 솔루션 agent 로그인시 예기치 않은,,,</strong>
+						<p>컨텐츠 영역 글줄 길이 테스트입니다. 내용을 입력바랍니다.컨텐츠 영역 글줄 길이 테스트,,,</p>
+						<span class="date">2016.07.15</span>
+					</a>
+				</div>
+
+				<div class="list more">
+					<a href="../notice/SP_NO_1001.html">더보기</a>
+				</div>
+
+			</div>
+
+			<div class="bn_wrap">
+				<div class="comm_banner" data-main-banner='{"show":5, "scroll":5}'>
+					<div><a href="#"><img src="/resource/images/temp/main_bnn01.jpg" alt=""></a></div>
+					<div><a href="#"><img src="/resource/images/temp/main_bnn02.jpg" alt=""></a></div>
+					<div><a href="#"><img src="/resource/images/temp/main_bnn03.jpg" alt=""></a></div>
+					<div><a href="#"><img src="/resource/images/temp/main_bnn04.jpg" alt=""></a></div>
+					<div><a href="#"><img src="/resource/images/temp/main_bnn05.jpg" alt=""></a></div>
+					<div><a href="#"><span class="txt_bn"><span>휴대폰 지원금 및 판매가격</span></span></a></div>
+					<div><a href="#"><span class="txt_bn"><span>바로픽업 주문관리</span></span></a></div>
+					<div><a href="#"><span class="txt_bn"><span>양식지 관리</span></span></a></div>
+					<div><a href="#"><span class="txt_bn"><span>주민등록증 진위 확인</span></span></a></div>
+					<div><a href="#"><span class="txt_bn"><span>주민등록증 진위 확인</span></span></a></div>
+				</div>
+			</div><!-- //Main Banner -->
+		</div>
+
+	</div><!-- //Container -->
+
+	<div id="footer">
+		<div class="infoot">
+			<span class="ft_logo skb">SK broadband</span>
+			<ul>
+				<li><a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('/common/SP_FO_1002.html', '975', '618', '개인정보 취급방침');">개인정보취급방침</a></li>
+				<li><a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('/common/SP_FO_1003.html', '975', '618', '도움말');">도움말</a></li>
+			</ul>
+			<address>서울특별시 중구 퇴계로 24 SK 남산그린빌딩 SK브로드밴드(주) 대표이사/사장 : 이인천</address>
+			<p class="copyright">COPYRIGHT 2017 BY SK Broadband CO., LTD. ALL RIGHTS RESERVED</p>
+		</div>
+	</div><!-- //Footer -->
+</div><!-- //Wrap -->
+</body>
+</html>

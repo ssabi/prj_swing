@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>분류 관리 &lt; MY PAGE &lt; Swing Portal</title>
+
+<link rel="stylesheet" href="/resource/css/style.css">
+<style>
+body{overflow-y:visible;background-color:#fff}
+</style>
+<script src="/resource/js/script.js"></script>
+<script src="/resource/js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$(".class_mng .add").on({
+		"click" : function(e){
+			e.preventDefault();
+
+			var _this = $(this);
+			var parent = _this.closest(".class_mng");
+			var input = parent.find("input");
+
+			//if(input.val().length > 0){
+				ele.add(parent,_this);
+			//}
+			//ele.del(_this);
+		}
+	});
+});
+
+var ele = {
+	add : function(parent, target){
+		var $this = $(target);
+		var $parent = $(parent);
+		var p = $("<p></p>");
+		var input = $this.siblings("input").clone().attr("readonly", true);
+		var ctrl = $this.clone().removeClass("add").addClass("del").text("삭제");
+		p.append(input).append(ctrl).prependTo($parent);
+
+		ele.del(target);
+
+		//입력필드 초기화
+		$parent.find(".chklen input").val("");
+		$parent.find(".chklen .byte>span").text("0");
+	},
+	del : function(target){
+		$(".class_mng .del").on({
+			"click" : function(e){
+				e.preventDefault();
+
+				$(this).closest("p").remove();
+			}
+		});
+	}
+}
+</script>
+</head>
+<body>
+<!-- //Popup size : 920x611 -->
+<div id="pop_wrap">
+	<div id="pop_head">
+		<strong>분류 관리</strong>
+		<a href="#" class="close" data-pop-close="popup">닫기</a>
+	</div><!-- //Header -->
+	<div id="pop_container">
+		<div class="class_mng">
+			<!-- 
+			<p><input type="text" value="" /><a href="#" class="del">삭제</a></p>
+			<p><input type="text" value="" /><a href="#" class="del">삭제</a></p>
+			<p><input type="text" value="" /><a href="#" class="del">삭제</a></p>
+			-->
+			<p class="chklen" data-chk-length><input type="text" value="" placeholder="분류명입력" /><a href="#" class="add">추가</a><span class="byte"><span>0</span>/<em class="count">24</em></span></p>
+		</div>
+
+		<div class="btnbox">
+			<a href="#" class="btn confirm">확인</a>
+			<a href="#" class="btn" data-pop-close="popup">취소</a>
+		</div>
+	</div><!-- //Container -->
+</div>
+</body>
+</html> 
