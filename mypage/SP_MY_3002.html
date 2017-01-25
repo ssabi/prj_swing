@@ -21,11 +21,11 @@ $(document).ready(function(){
 
 			var _this = $(this);
 			var parent = _this.closest(".class_mng");
-			var input = parent.find("input");
+			var input = parent.find(".default input");
 
-			//if(input.val().length > 0){
+			if(input.val().length > 0){
 				ele.add(parent,_this);
-			//}
+			}
 			//ele.del(_this);
 		}
 	});
@@ -35,12 +35,22 @@ var ele = {
 	add : function(parent, target){
 		var $this = $(target);
 		var $parent = $(parent);
-		var p = $("<p></p>");
-		var input = $this.siblings("input").clone().attr("readonly", true);
+		var p = $("<p data-chk-length></p>");
+
+		//var input = $this.siblings("input").clone().attr("readonly", true);
+		var input = $this.siblings("input").clone();
+		var len = $this.siblings(".byte").clone();
 		var ctrl = $this.clone().removeClass("add").addClass("del").text("삭제");
-		p.append(input).append(ctrl).prependTo($parent);
+		//p.append(input).append(ctrl).prependTo($parent);
+
+		$this.closest("p").before(p.append(input).append(ctrl).append(len));
 
 		ele.del(target);
+
+		chklength();
+		if(browser() == "Firefox"){
+			keyUpTrigger();
+		}
 
 		//입력필드 초기화
 		$parent.find(".chklen input").val("");
@@ -72,7 +82,7 @@ var ele = {
 			<p><input type="text" value="" /><a href="#" class="del">삭제</a></p>
 			<p><input type="text" value="" /><a href="#" class="del">삭제</a></p>
 			-->
-			<p class="chklen" data-chk-length><input type="text" value="" placeholder="분류명입력" /><a href="#" class="add">추가</a><span class="byte"><span>0</span>/<em class="count">24</em></span></p>
+			<p class="chklen default" data-chk-length><input type="text" value="" placeholder="분류명입력" /><a href="#" class="add">추가</a><span class="byte"><span>0</span>/<em class="count">24</em></span></p>
 		</div>
 
 		<div class="btnbox">

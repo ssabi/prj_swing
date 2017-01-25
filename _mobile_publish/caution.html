@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<title>Swing Mobile 설치</title>
+
+<link rel="stylesheet" href="./resource/css/publish.css">
+<script src="./resource/js/libs/jquery-1.11.2.min.js"></script>
+<script src="./resource/js/common.ui.js"></script>
+<script>
+$(window).resize(function(){
+	resizeHeight();
+});
+</script>
+</head>
+<body>
+<!-- //Popup size : 975x686 -->
+<div id="pop_wrap">
+	<div id="pop_container">
+
+		<div class="caution">
+			<p>Swing SSM을 설치하는 경우 향후 TokTok 모바일 사용이 필요한 경우 <br>Swing SSM을 삭제하고 TokTok SSM을 재설치 해야 합니다.</p>
+			<strong>정말 설치하시겠습니까?</strong>
+
+			<div class="btnbox">
+				<div>
+					<a href="javascript:void(0);" class="btn" onclick="javascript:close_layer();">취소</a>
+					<a href="#" class="btn confirm">설치</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

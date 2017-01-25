@@ -1,6 +1,7 @@
 /* Button - Box */
-.btnbox{overflow:hidden;margin-top:20px;text-align:center}
-.btn{display:inline-block;padding:0 10px;min-width:72px;height:40px;line-height:40px;border:0;background-color:#e2e2e2;color:#454545;text-align:center;vertical-align:middle;/* transition:all 0.3s ease */}
+.btnbox{display:inline-block;/* overflow:hidden; */margin-top:20px;text-align:center;width:100%}
+.btn{display:inline-block;/* padding:0 10px;min-width:72px; */padding:0 15px;min-width:62px;height:40px;line-height:40px;border:0;background-color:#e2e2e2;color:#454545;text-align:center;vertical-align:middle;/* transition:all 0.3s ease */}
+button.btn + button.btn{margin-left:4px}
 .btn.confirm{background-color:#ff3b57;color:#fff}
 .btn:hover{background-color:#c0c0c0}
 .btn.active, .btn:active{background-color:#ff3b57;color:#fff}
@@ -10,6 +11,15 @@
 .btn.line{display:inline-block;padding:12px 10px;min-width:72px;height:auto;min-height:22px;line-height:20px;color:#666;border:1px solid #d2d2d2;background-color:#fff}
 .btn.line:hover{background-color:#e6e6e6}
 .btn.line.active, .btn.line:active{border-color:#ff3b57;background-color:#ff3b57;color:#fff}
+.btnbox p{line-height:140%}
+
+.btnbox .sod_select{height:40px;width:auto !important;min-width:80px}
+.btnbox .sod_select .sod_label{height:38px;line-height:38px;padding-right:20px}
+.btnbox .sod_select:after{top:17px}
+.btnbox .sod_select .sod_list_wrapper{width:auto !important;right:-1px !important}
+/* 
+.btnbox .sod_select{vertical-align:top}
+ */
 
 /* 공지작성 */
 .btn.line.add_note{background-color:#e2e2e2;border:1px solid #b3b3b3}
@@ -99,13 +109,25 @@ button.btn.line02{height:34px;line-height:0}
 .paging .prev:active:before{background-position:-21px -113px}
 .paging .next:active:before{background-position:-37px -113px}
 .paging .last:active:before{background-position:-53px -113px}
+.paging .disable{/* border:1px solid #e2e2e2 !important; */border:1px solid #b3b3b3 !important;opacity:0.6}
+.paging .disable:active{/* border-color:#e2e2e2 !important; */border:1px solid #b3b3b3 !important;background-color:transparent !important}
+/*
+.paging .first.disable:before{background-position:-102px -216px}
+.paging .prev.disable:before{background-position:-123px -216px}
+.paging .next.disable:before{background-position:-139px -216px}
+.paging .last.disable:before{background-position:-155px -216px}
+*/
+.paging .first.disable:active:before{background-position:-81px 0 !important}
+.paging .prev.disable:active:before{background-position:-102px 0 !important}
+.paging .next.disable:active:before{background-position:-118px 0 !important}
+.paging .last.disable:active:before{background-position:-134px 0 !important}
 .paging>div{position:relative;left:-50%;float:right}
 .paging>div.mpage{display:none}
 .paging a, .paging span{position:relative;left:50%;float:left;text-align:center}
-.paging a{display:inline-block;width:36px;height:36px;line-height:36px;border:1px solid #b3b3b3;vertical-align:middle;/* transition:background-color 0.3s ease, color 0.3s ease */}
+.paging a, .paging span.first, .paging span.prev, .paging span.next, .paging span.last{display:inline-block;padding:0;width:36px;height:36px;line-height:36px;border:1px solid #b3b3b3;vertical-align:middle;/* transition:background-color 0.3s ease, color 0.3s ease */}
 .paging a:hover, .paging a:focus{background-color:#e6e6e6}
 .paging a img{vertical-align:baseline;line-height:100%}
-.paging a.prev, .paging a.last{margin-left:-1px}
+.paging a.prev, span.prev, .paging a.last, span.last{margin-left:-1px}
 .paging span{overflow:hidden;padding:0 13px}
 .paging span a{position:static;width:auto;min-width:22px;padding:0 6px;left:0;float:left;border:0;line-height:38px;background-color:transparent}
 .paging span a.on{border:1px solid #ff3b57;margin:0 7px;min-width:26px;padding:0 5px;line-height:36px;color:#ff3b57}

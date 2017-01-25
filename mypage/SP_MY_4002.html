@@ -28,6 +28,11 @@ body{overflow-y:visible;background-color:#fff}
 				<dl>
 					<dt>[설문] 고해지율 유통망 대상 사유 <img src="/resource/images/common/badge_progress.png" alt="진행" class="badge"></dt>
 					<dd class="desc">고해지율 유통망 대상에 대한 사유를 제출해주세요. </dd>
+					<dd class="type">
+						<input type="checkbox" name="" id="type01" class="disabled" disabled="disabled" checked="checked" /><label for="type01">익명</label>
+						<input type="checkbox" name="" id="type02" class="disabled" disabled="disabled" checked="checked" /><label for="type02">설문 결과 공개</label>
+						<input type="checkbox" name="" id="type03" class="disabled" disabled="disabled" checked="checked" /><label for="type03">모바일</label>
+					</dd>
 					<dd><span>기간</span>2016.01.05 - 2016.02.04</dd>
 					<dd>
 						<span>대상</span>
@@ -46,7 +51,10 @@ body{overflow-y:visible;background-color:#fff}
 						<span class="require">필수문항</span>
 					</div><!-- //문항 타이틀 -->
 					<div class="sv_item">
-						<p class="desc">문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력</p>
+						<p class="desc">
+							문항 생성 시 문항에 대한 설명을 입력한 경우에만 출력
+							<span class="desc_img"><img src="/resource/images/temp/LG.jpg" alt=""></span>
+						</p>
 						<p><input type="radio" name="item01" id="svItem01-01" /><label for="svItem01-01">상담매니저</label></p>
 						<p><input type="radio" name="item01" id="svItem01-02" /><label for="svItem01-02">관리자</label></p>
 						<p><input type="radio" name="item01" id="svItem01-03" /><label for="svItem01-03">상담지원</label></p>

@@ -15,7 +15,17 @@ body{overflow-y:visible;background-color:#fff}
 <script src="/resource/js/common.js"></script>
 <script>
 $(document).ready(function(){
-	$("#helpJsTree").jstree();
+	var jsTree = $("#helpJsTree").jstree();
+	jsTree.on("changed.jstree", function(e, data){
+		var $this = $(data.node.a_attr).attr("data-group");
+
+		hasDataAttr("[data-group-con]", function($ele){
+			$ele.each(function(){
+				$(this).hide();
+			});
+		});
+		$('[data-group-con="'+$this+'"]').show();
+	});
 });
 </script>
 </head>
@@ -33,15 +43,15 @@ $(document).ready(function(){
 				<div>
 					<div id="helpJsTree">
 						<ul>
-							<li><a href="#">파트너 가입</a>
+							<li><a href="#" data-group="group01">파트너 가입</a>
 								<ul>
-									<li><a href="#">가입하기</a></li>
-									<li><a href="#">개인정보 관리</a></li>
+									<li><a href="#" data-group="group01-01">가입하기</a></li>
+									<li><a href="#" data-group="group01-02">개인정보 관리</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Notice</a>
+							<li><a href="#" data-group="group02">Notice</a>
 								<ul>
-									<li><a href="#">등록하기</a></li>
+									<li><a href="#" data-group="group02-01">등록하기</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -49,7 +59,28 @@ $(document).ready(function(){
 				</div>
 			</div>
 			<div class="help_cont">
-				
+				<div class="scrollbox">
+					<div class="cont show" data-group-con="group01">
+					1
+					</div>
+
+					<div class="cont" data-group-con="group01-01">
+					2
+					</div>
+
+					<div class="cont" data-group-con="group01-02">
+					3
+					</div>
+
+					<div class="cont" data-group-con="group02">
+					4
+					</div>
+
+					<div class="cont" data-group-con="group02-01">
+					5
+					</div>
+
+				</div>
 			</div>
 		</div>
 

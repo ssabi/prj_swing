@@ -82,9 +82,9 @@
 .tbl_wrap .ells100{vertical-align:top}
 .tbl_wrap i{display:inline-block;overflow:hidden;margin:-1px 0 0 5px;vertical-align:middle;text-indent:-9999px}
 .tbl_wrap i + i{margin-left:4px}
-.tbl_wrap i.badge_urgent{width:29px;height:16px;background:url(/resource/images/common/badge_urgent.png) no-repeat left top}
-.tbl_wrap i.badge_important{width:29px;height:16px;background:url(/resource/images/common/badge_important.png) no-repeat left top}
-.tbl_wrap i.badge_new{width:33px;height:17px;background:url(/resource/images/common/badge_new.png) no-repeat left top}
+.tbl_wrap i.badge_urgent{width:30px;height:16px;background:url(/resource/images/common/badge_urgent.png) no-repeat left top}
+.tbl_wrap i.badge_important{width:30px;height:16px;background:url(/resource/images/common/badge_important.png) no-repeat left top}
+.tbl_wrap i.badge_new{width:30px;height:16px;background:url(/resource/images/common/badge_new.png) no-repeat left top}
 .tbl_wrap i.badge_lock{width:10px;height:16px;background:url(/resource/images/common/ico_lock.png) no-repeat left top}
 .tbl_wrap i.badge_file{width:18px;height:16px;background:url(/resource/images/common/ico_file.png) no-repeat left top}
 .tbl_wrap i.badge_mobile{width:13px;height:18px;margin-top:0;background:url(/resource/images/common/badge_mobile.png) no-repeat left top}
@@ -130,11 +130,12 @@
 .tbl_list .up.disabled, .tbl_list .down.disabled{display:none}
 .tbl_list .up{background-position:-74px -34px}
 .tbl_list .down{background-position:-95px -34px}
-.tbl_list .orderby{display:inline-block;width:59px;vertical-align:middle}
-.tbl_list .orderby a{float:left}
+.tbl_list .orderby{display:inline-block;width:59px;vertical-align:middle;text-align:center;word-spacing:0;line-height:0;letter-spacing:0;font-size:0}
+.tbl_list .orderby a{/* float:left */vertical-align:middle}
 .tbl_list .orderby a + a{margin-left:5px}
+.tbl_list .orderby a.disabled + a{margin-left:0}
 .tbl_list .orderby.first{}
-.tbl_list .orderby.first a + a{float:right}
+.tbl_list .orderby.first a + a{/* float:right */}
 .tbl_list .period{display:block}
 .tbl_list .txt_btn{text-decoration:underline}
 .tbl_list .img{display:inline-block;width:228px;height:60px;vertical-align:middle}
@@ -146,7 +147,8 @@
 .tbl_list .prvbox .tit a{display:inline-block;width:auto;max-width:100%;vertical-align:middle}
 #pop_container .tbl_list .prvbox .tit a{vertical-align:top}
 .tbl_list .prvbox .tit .badge{}
-.tbl_list .prvbox .con{overflow:hidden;height:44px;margin:5px 0 0}
+.tbl_list .prvbox .con{overflow:hidden;height:44px;margin:5px 0 0;}
+.tbl_list .prvbox .con, .tbl_list .prvbox .con *{font-size:13px !important;line-height:22px !important;color:#4c4c4c !important;font-family:Malgun Gothic, '맑은 고딕', Dotum, '돋움', sans-serif !important}
 .tbl_list .prvbox .con:before{content:"";float:left;width:5px;height:44px}
 .tbl_list .prvbox .con > *:first-child{float:right;width:100%;margin-left:-5px}
 .tbl_list .prvbox .con:after{content:"\02026";position:relative;top:-25px;left:100%;float:right;width:3em;margin-left:-3em;padding-right:5px;text-align:right;
@@ -241,6 +243,7 @@
 
 .vbody{padding:24px 0 26px;line-height:22px;letter-spacing:-0.025em;border-bottom:1px solid #b3b3b3}
 .vbody .filearea{margin:96px 0 -6px}
+.vbody .fileDown{display:none;margin:26px 0 0}
 
 .vbody_mv{overflow:hidden;position:relative;margin-top:20px;padding-bottom:20px;border-bottom:1px solid #b3b3b3}
 .vbody_mv .video_area, .vbody_mv .video_desc{/* float:left; */height:301px;border:1px solid #b3b3b3}
@@ -316,18 +319,21 @@
 .tbl_write td input[type=radio] + label{margin:9px 0;padding-left:23px;height:16px;line-height:16px;background:url(/resource/images/common/radio16x16.png) no-repeat left top}
 .tbl_write td input[type=radio]:checked + label{background-position:0 -16px}
 .tbl_write td label + input[type=checkbox] + label, .tbl_write td label + input[type=radio] + label{margin-left:20px}
-.tbl_write td label + p, .tbl_write td label + .date_opt{margin-left:14px}
+.tbl_write td label + p, .tbl_write td label + .date_opt, .tbl_write td .date_tit + .date_opt{margin-left:14px}
 .tbl_write td .start_date{}
 .tbl_write td .end_date{margin-top:4px}
+.tbl_write td .date_tit{display:inline-block;line-height:26px;vertical-align:middle}
+.tbl_write td .date_tit.disable{color:#b2b2b2}
 .tbl_write td .start_date.disable label, .tbl_write td .end_date.disable label{color:#b2b2b2}
 .tbl_write td .start_date, .tbl_write td .end_date{position:relative}
 .tbl_write td .start_date p, .tbl_write td .end_date p{display:inline-block;position:relative}
 .tbl_write td .start_date input[type=text], .tbl_write td .end_date input[type=text]{padding-right:40px;width:88px}
-.tbl_write td .date_opt{/* display:none */display:inline-block}
+.tbl_write td .date_opt{/* display:none */display:inline-block;vertical-align:middle}
 .tbl_write td .date_opt.show{display:inline-block}
 .tbl_write td .date_opt .disable{background-color:#fff;border-color:#d9d9d9;color:#b2b2b2}
 .tbl_write td .date_opt .disabled{background-color:#fff;border-color:#d9d9d9;color:#b2b2b2}
 .tbl_write td .date_opt .sod_select.disabled:after{opacity:0.5}
+.tbl_write td .date_opt .disable.hasDatepicker + img{opacity:0.5;cursor:default}
 .tbl_write td .target_chk{position:relative}
 .tbl_write td .guide_target{position:absolute;right:0;top:50%;margin-top:-11px}
 .tbl_write td .guide_target>a{display:block;position:relative;padding-left:27px;height:22px;color:#999}
@@ -425,6 +431,6 @@ type01, type02 클래스 명 겹치는 문제
 .single_tb.s_top{margin:0 0 54px 0}
 
 /* fileDown */
-.fileDown{width:100%;min-height:30px;background-color:#f0f0f0;margin-top:10px;line-height:30px;padding-left:10px;box-sizing:border-box}
+.fileDown{overflow:hidden;overflow-y:auto;width:100%;min-height:30px;max-height:90px;background-color:#f0f0f0;margin-top:10px;line-height:30px;padding:0 10px;box-sizing:border-box}
 .fileDown a{background:url(/resource/images/common/ico_down.png) no-repeat 0 center;padding-left:13px;margin-right:10px}
 .fileDown a:hover{text-decoration:underline;color:#000}

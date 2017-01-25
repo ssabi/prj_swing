@@ -5,5 +5,4 @@ document.write("<script src='/resource/js/libs/jquery.easing.min.js'></script>")
 document.write("<script src='/resource/js/plugins/selectordie.min.js'></script>");				//Design Selectbox
 document.write("<script src='/resource/js/plugins/spectrum.js'></script>");						//Colopicker
 document.write("<script src='/resource/js/plugins/slick.min.js'></script>");							//Slick Slider
-document.write("<script src='/resource/js/plugins/jquery.blockUI.js'></script>");				//Layer Popup BlockUI
 document.write("<script src='/resource/js/plugins/jstree.min.js'></script>");						//jsTree

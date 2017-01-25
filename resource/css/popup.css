@@ -8,6 +8,15 @@
 #pop_head strong{display:table-cell;padding-left:22px;margin-bottom:1px;font-weight:normal;font-size:24px;line-height:30px;color:#fff;vertical-align:middle}
 #pop_head .close{display:block;overflow:hidden;position:absolute;right:15px;top:15px;padding:10px;width:17px;height:17px;background:url(/resource/images/common/close17x17.png) no-repeat 10px 10px;text-indent:-9999px}
 
+/* Popup Footer */
+#pop_footer{position:fixed;left:0;bottom:0;width:100%;height:42px;background-color:#ebeced}
+#pop_footer .inner{position:relative;padding:12px 25px 0}
+#pop_footer input[type=checkbox]{position:absolute;left:-9999px}
+#pop_footer input[type=checkbox] + label{display:inline-block;padding-left:25px;height:18px;line-height:18px;letter-spacing:-0.025em;background:url(/resource/images/common/chkbox18x18.png) no-repeat left top;cursor:pointer}
+#pop_footer input[type=checkbox]:checked + label{background-position:0 -18px}
+#pop_footer .close{display:inline-block;position:absolute;right:25px;top:13px;padding-right:13px;color:#454545;background:url(/resource/images/common/close9x8.png) no-repeat right -28px}
+
+
 /* Popup Container */
 /* 대상설정 */
 .target_box a{transition:all 0s ease 0s !important}
@@ -147,7 +156,50 @@
 .termbox.privacy_type .scrollbox p{padding-left:10px}
 .termbox.privacy_type .scrollbox p + strong{margin-top:28px}
 /* 도움말 */
-.help_box{position:relative;width:893px;height:530px;border:1px solid #b3b3b3;border-top-color:#000}
+.help_box{position:relative;/* width:893px; */height:530px;border:1px solid #b3b3b3;border-top-color:#000}
 .help_list{overflow:hidden;overflow-y:auto;position:absolute;left:0;top:0;width:232px;height:100%;border-right:1px solid #b3b3b3}
 .help_list>div{padding:20px}
 .help_cont{margin-left:233px}
+.help_cont .scrollbox{overflow:hidden;overflow-y:auto;height:490px;padding:20px}
+.help_cont .cont{display:none}
+.help_cont .cont.show{display:block}
+
+.main_pop #pop_wrap{height:100%}
+.main_pop #pop_container{min-height:100%;/* margin-bottom:-42px; */padding:0}
+.main_pop #pop_container:after{content:'';display:block;width:100%;height:42px}
+
+.pop_con.scrollbox{/* overflow:hidden;overflow-y:auto;position:absolute;left:40px;top:40px;bottom:90px;right:40px;border:1px solid #b3b3b3 */}
+.pop_con.scrollbox .inner{padding:34px 20px 36px;line-height:22px;letter-spacing:-0.025em;}
+
+/* 서약서 */
+.oath{padding:30px;border:1px solid #b3b3b3}
+.oath em{display:block;margin-top:-5px;padding:0 0 19px;font-weight:bold;font-size:17px;line-height:22px;color:#333;text-align:center}
+.oath .bgtxt{padding:16px 28px 17px;line-height:22px;letter-spacing:-0.05em;color:#4c4c4c;background-color:#ebeced}
+.oath strong{display:block;padding:25px 20px 0;font-weight:bold;line-height:22px;letter-spacing:-0.05em;color:#333;text-align:center}
+.oath ol{margin-top:22px}
+.oath ol li{position:relative;margin-top:7px;padding-left:22px;line-height:20px;letter-spacing:-0.05em;color:#4c4c4c}
+.oath ol li:first-child{margin-top:0}
+.oath ol li .num{font-weight:bold;position:absolute;left:9px;top:0}
+.oath br{display:none}
+.oath .cfbox{margin-top:28px;padding:15px 20px 14px;font-weight:bold;background-color:#f5f5f6;text-align:center}
+.oath .cfbox span{color:#ff3b57}
+.oath .cfbox input{padding:0 10px;width:48px;height:28px;line-height:28px;text-align:center}
+.oath .date{margin-top:25px;font-size:15px;text-align:center;line-height:22px}
+.oath .date strong{display:inline;padding:0;letter-spacing:0}
+.oath .sign{margin-top:36px;position:relative;font-size:15px;text-align:center}
+.oath .sign span{position:absolute;right:0;top:0;font-size:13px}
+#pop_wrap .oath .btnbox{margin-top:30px}
+#pop_wrap .noti{position:relative;margin-top:11px;font-size:12px;line-height:22px;text-align:center}
+#pop_wrap .noti:before{content:'';display:inline-block;margin:-1px 4px 0 0;width:16px;height:16px;background:url(/resource/images/common/noti.png) no-repeat left top;background-size:16px 16px;vertical-align:middle}
+
+/* 취합담당자 */
+.layer3{overflow:hidden;width:739px;margin:0 auto;border-top:1px solid #000;border-bottom:1px solid #b3b3b3}
+.layer3 .layer{position:relative;float:left;margin-left:-1px;width:245px;border:1px solid #b3b3b3;border-top:0;border-bottom:0}
+.layer3 .layer:first-child{margin-left:0}
+.layer3 input[type=checkbox]{position:absolute;left:-9999px}
+.layer3 input[type=checkbox] + label{display:inline-block;padding-left:23px;height:15px;line-height:14px;background:url(/resource/images/common/chkbox14x14.png) no-repeat left 1px;color:#4c4c4c;vertical-align:top;cursor:pointer}
+.layer3 input[type=checkbox]:checked + label{background-position:0 -14px}
+.layer3 .tit{padding:0 20px;height:45px;border-bottom:1px solid #b3b3b3;font-weight:bold;font-size:15px;color:#333}
+.layer3 .tit input[type=checkbox] + label{margin-top:15px;color:#333}
+.layer3 .con{overflow:hidden;overflow-y:auto;height:343px}
+.layer3 .con div{padding:13px 20px 14px;border-bottom:1px solid #e1e1e1}

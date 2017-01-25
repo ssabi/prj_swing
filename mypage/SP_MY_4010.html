@@ -78,13 +78,15 @@ body{overflow-y:visible;background-color:#fff}
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">대상</th>
+								<th scope="row" class="vt">대상</th>
 								<td>
 									<input type="radio" name="target" id="target01" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"all_hide"}' checked="checked" /><label for="target01">전체</label>
-									<input type="radio" name="target" id="target02" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"show"}' /><label for="target02">주소록에서 선택</label>
+									<input type="radio" name="target" id="target02" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"show"}' /><label for="target02">대상 선택</label>
 									<input type="radio" name="target" id="target03" data-target-toggle='{"ele":".basic_opt.file","ele02":".basic_opt.target","display":"show"}' /><label for="target03">파일 업로드</label>
 									<div class="basic_opt target">
-										<div class="target_box mt0">
+										<a href="javascript:void(0);" class="btn line02" onclick="javascript:gf_DialogFrame('SP_MY_4012.html', '920', '544', '대상찾기', true, true, true, '', '', '')">대상찾기</a>
+										<a href="javascript:void(0);" class="btn line02" onclick="javascript:gf_DialogFrame('SP_MY_4013.html', '820', '532', '취합담당자 선택', true, true, true, '', '', '')">취합담당자선택</a>
+										<div class="target_box">
 											<div data-target-box="box01">
 												<span class="target_tag">미디어그룹<a href="#" class="del"></a></span>
 												<span class="target_tag">미디어그룹2<a href="#" class="del"></a></span>
@@ -99,7 +101,6 @@ body{overflow-y:visible;background-color:#fff}
 												<span class="target_tag">미디어그룹11<a href="#" class="del"></a></span>
 												<span class="target_tag">미디어그룹12<a href="#" class="del"></a></span>
 											</div>
-											<a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('SP_MY_4012.html', '920', '611', '대상찾기', true, true, true, '', '', '')" class="find_target submit" data-target-box-button="box01">대상찾기</a>
 										</div>
 									</div><!-- //주소록에서 선택 -->
 

@@ -89,10 +89,10 @@
 								<th scope="row" class="vt"><span>게시 기간</span></th>
 								<td>
 									<div class="start_date">
-										<input type="checkbox" name="" id="post01" checked="checked" /><label for="post01">게시 시작일</label>
+										<span class="date_tit disable">게시 시작일</span>
 										<div class="date_opt">
-											<p><input type="text" id="post_start" readonly="readonly" /></p>
-											<select class="w70">
+											<p><input type="text" id="post_start" class="disable" readonly="readonly" disabled="disabled" /></p>
+											<select class="w70" disabled="disabled">
 												<option value="">01</option>
 												<option value="">02</option>
 												<option value="">03</option>
@@ -118,7 +118,7 @@
 												<option value="">23</option>
 												<option value="">00</option>
 											</select>
-											<select class="w70">
+											<select class="w70" disabled="disabled">
 												<option value="">00</option>
 												<option value="">10</option>
 												<option value="">20</option>
@@ -129,7 +129,7 @@
 										</div>
 									</div>
 									<div class="end_date">
-										<input type="checkbox" name="" id="post02" /><label for="post02">게시 종료일</label>
+										<span class="date_tit">게시 종료일</span>
 										<div class="date_opt">
 											<p><input type="text" id="post_end" readonly="readonly" /></p>
 											<select class="w70">
@@ -213,11 +213,12 @@ SK와이번스 이석모 불펜포수의 감동 스토리 풀버전을 [연결�
 
 	<div id="footer">
 		<div class="infoot">
+			<span class="ft_logo skt">SK telecom</span>
 			<ul>
-				<li><a href="#">개인정보취급방침</a></li>
-				<li><a href="#">도움말</a></li>
+				<li><a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('/common/SP_FO_1002.html', '975', '672', '개인정보 취급방침');">개인정보취급방침</a></li>
+				<li><a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('/common/SP_FO_1003.html', '975', '672', '도움말');">도움말</a></li>
 			</ul>
-			<address>서울특별시 중구 을지로 65(을지로2가) SK텔레콤(주) 대표이사/사장 : 장동현</address>
+			<address>서울특별시 중구 을지로 65(을지로2가) SK텔레콤(주)</address>
 			<p class="copyright">COPYRIGHT 2017 BY SKTELECOM CO., LTD. ALL RIGHTS RESERVED</p>
 		</div>
 	</div><!-- //Footer -->

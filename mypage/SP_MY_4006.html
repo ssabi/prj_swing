@@ -77,13 +77,15 @@ body{overflow-y:visible;background-color:#fff}
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">대상</th>
+							<th scope="row" class="vt">대상</th>
 							<td>
 								<input type="radio" name="target" id="target01" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"all_hide"}' checked="checked" /><label for="target01">전체</label>
-								<input type="radio" name="target" id="target02" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"show"}' /><label for="target02">주소록에서 선택</label>
+								<input type="radio" name="target" id="target02" data-target-toggle='{"ele":".basic_opt.target","ele02":".basic_opt.file","display":"show"}' /><label for="target02">대상 선택</label>
 								<input type="radio" name="target" id="target03" data-target-toggle='{"ele":".basic_opt.file","ele02":".basic_opt.target","display":"show"}' /><label for="target03">파일 업로드</label>
 								<div class="basic_opt target">
-									<div class="target_box mt0">
+									<a href="javascript:void(0);" class="btn line02" onclick="javascript:gf_DialogFrame('SP_MY_4012.html', '920', '544', '대상찾기', true, true, true, '', '', '')">대상찾기</a>
+									<a href="javascript:void(0);" class="btn line02" onclick="javascript:gf_DialogFrame('SP_MY_4013.html', '820', '532', '취합담당자 선택', true, true, true, '', '', '')">취합담당자선택</a>
+									<div class="target_box">
 										<div data-target-box="box01">
 											<span class="target_tag">미디어그룹<a href="#" class="del"></a></span>
 											<span class="target_tag">미디어그룹2<a href="#" class="del"></a></span>
@@ -98,7 +100,6 @@ body{overflow-y:visible;background-color:#fff}
 											<span class="target_tag">미디어그룹11<a href="#" class="del"></a></span>
 											<span class="target_tag">미디어그룹12<a href="#" class="del"></a></span>
 										</div>
-										<a href="javascript:void(0);" class="find_target submit" onclick="gf_DialogFrame('../community/SP_CO_2011.html', 920, 541, '대상찾기')" data-target-box-button="box01">대상찾기</a>
 									</div>
 								</div><!-- //주소록에서 선택 -->
 
@@ -140,7 +141,16 @@ body{overflow-y:visible;background-color:#fff}
 						<input type="text" placeholder="문항을 입력하세요" />
 						<span class="byte"><span>0</span>/<em class="count">126</em></span>
 					</div>
-					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="item_con">
+						<textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea>
+						<div class="filebox">
+							<input type="file" />
+							<a href="#" class="btn line02 add_desc_img">문항 이미지 업로드</a>
+							<!-- 파일이 업로드 된 경우 -->
+							<span>2017-01-13 09:53:01.jpg<a href="#" class="del_img">삭제</a></span>
+							<!-- //파일이 업로드 된 경우 -->
+						</div>
+					</div>
 					<div class="answer">
 						<p class="default" data-chk-length>
 							<input type="radio" name="single_chk" id="sc01" /><label for="sc01"></label>
@@ -175,7 +185,17 @@ body{overflow-y:visible;background-color:#fff}
 						<input type="text" placeholder="문항을 입력하세요" />
 						<span class="byte"><span>0</span>/<em class="count">126</em></span>
 					</div>
-					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="item_con">
+						<textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea>
+						<div class="filebox">
+							<input type="file" />
+							<a href="#" class="btn line02 add_desc_img">문항 이미지 업로드</a>
+							<!-- 
+							파일이 업로드 된 경우
+							<span>파일명 <a href="#" class="del_img">삭제</a></span>
+							-->
+						</div>
+					</div>
 					<div class="answer">
 						<p class="default" data-chk-length>
 							<input type="checkbox" name="multi_chk" id="mc01" /><label for="mc01"></label>
@@ -208,7 +228,17 @@ body{overflow-y:visible;background-color:#fff}
 						<input type="text" placeholder="문항을 입력하세요" />
 						<span class="byte"><span>0</span>/<em class="count">126</em></span>
 					</div>
-					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="item_con">
+						<textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea>
+						<div class="filebox">
+							<input type="file" />
+							<a href="#" class="btn line02 add_desc_img">문항 이미지 업로드</a>
+							<!-- 
+							파일이 업로드 된 경우
+							<span>파일명 <a href="#" class="del_img">삭제</a></span>
+							-->
+						</div>
+					</div>
 					<div class="answer">
 						<div class="chklength" data-chk-length="">
 							<input type="text" value="" placeholder="답변을 입력하세요." />
@@ -231,7 +261,17 @@ body{overflow-y:visible;background-color:#fff}
 						<input type="text" placeholder="문항을 입력하세요" />
 						<span class="byte"><span>0</span>/<em class="count">126</em></span>
 					</div>
-					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="item_con">
+						<textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea>
+						<div class="filebox">
+							<input type="file" />
+							<a href="#" class="btn line02 add_desc_img">문항 이미지 업로드</a>
+							<!-- 
+							파일이 업로드 된 경우
+							<span>파일명 <a href="#" class="del_img">삭제</a></span>
+							-->
+						</div>
+					</div>
 					<div class="answer textarea" data-chk-length>
 						<textarea name="" id="" cols="30" rows="10" placeholder="답변을 입력하세요."></textarea>
 						<span class="byte"><span>0</span>/<em class="count">1000</em></span>
@@ -252,7 +292,17 @@ body{overflow-y:visible;background-color:#fff}
 						<input type="text" placeholder="문항을 입력하세요" />
 						<span class="byte"><span>0</span>/<em class="count">126</em></span>
 					</div>
-					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="item_con">
+						<textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea>
+						<div class="filebox">
+							<input type="file" />
+							<a href="#" class="btn line02 add_desc_img">문항 이미지 업로드</a>
+							<!-- 
+							파일이 업로드 된 경우
+							<span>파일명 <a href="#" class="del_img">삭제</a></span>
+							-->
+						</div>
+					</div>
 					<div class="answer filebox" data-file-box="span">
 						<input type="file" id="file01" /><label for="file01">파일 양식 업로드</label>
 						<span></span>
@@ -274,9 +324,19 @@ body{overflow-y:visible;background-color:#fff}
 						<input type="text" placeholder="문항을 입력하세요" />
 						<span class="byte"><span>0</span>/<em class="count">126</em></span>
 					</div>
-					<div class="item_con"><textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea></div>
+					<div class="item_con">
+						<textarea name="" id="" cols="30" rows="10" placeholder="문항에 대한 설명을 입력하세요"></textarea>
+						<div class="filebox">
+							<input type="file" />
+							<a href="#" class="btn line02 add_desc_img">문항 이미지 업로드</a>
+							<!-- 
+							파일이 업로드 된 경우
+							<span>파일명 <a href="#" class="del_img">삭제</a></span>
+							-->
+						</div>
+					</div>
 					<div class="answer">
-						<p class="desc"><span>*</span>이미지 업로드 버튼이 설문 대상에게 노출됩니다.</p>
+						<p class="desc"><span>*</span>설문 참여 시 설문 대상자에게 이미지를 업로드 할 수 있는 버튼이 노출됩니다.</p>
 					</div>
 					<a href="#" class="btn line02 del_item">문항삭제</a>
 				</div><!-- //image -->

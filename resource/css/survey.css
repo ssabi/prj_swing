@@ -8,22 +8,34 @@
 .sv_basic dt .badge{margin:-2px 0 0 0}
 .sv_basic dt i{display:inline-block;overflow:hidden;margin:-2px 0 0 0;vertical-align:middle;text-indent:-9999px}
 .sv_basic dt i.badge_mobile{margin:-1px 8px 0 0;width:13px;height:18px;background:url(/resource/images/common/badge_mobile.png) no-repeat left top}
-.sv_basic dt i.badge_save{width:43px;height:19px;background:url(/resource/images/common/badge_save.png) no-repeat left top}
-.sv_basic dt i.badge_progress{width:43px;height:19px;background:url(/resource/images/common/badge_progress.png) no-repeat left top}
-.sv_basic dt i.badge_standby{width:52px;height:19px;background:url(/resource/images/common/badge_dis_standby.png) no-repeat left top}
-.sv_basic dt i.badge_ing{width:43px;height:19px;background:url(/resource/images/common/badge_dis_ing.png) no-repeat left top}
-.sv_basic dt i.badge_end{width:52px;height:19px;background:url(/resource/images/common/badge_dis_end.png) no-repeat left top}
+.sv_basic dt i.badge_save{width:43px;height:18px;background:url(/resource/images/common/badge_save.png) no-repeat left top}
+.sv_basic dt i.badge_progress{width:43px;height:18px;background:url(/resource/images/common/badge_progress.png) no-repeat left top}
+.sv_basic dt i.badge_standby{width:52px;height:18px;background:url(/resource/images/common/badge_dis_standby.png) no-repeat left top}
+.sv_basic dt i.badge_ing{width:43px;height:18px;background:url(/resource/images/common/badge_dis_ing.png) no-repeat left top}
+.sv_basic dt i.badge_end{width:52px;height:18px;background:url(/resource/images/common/badge_dis_end.png) no-repeat left top}
 .sv_basic dd{position:relative;padding-left:40px;margin-top:2px}
 .sv_basic dd.desc{margin-top:17px;padding:0 0 5px 0;font-size:15px}
 .sv_basic dd span{display:inline-block;position:absolute;left:0;top:0;/* margin-left:-40px; */width:40px;color:#000}
 .sv_basic dd.date span{line-height:32px}
+.sv_basic dd.type{padding-left:0}
+.sv_basic dd.type input[type=checkbox]{position:absolute;left:-9999px}
+.sv_basic dd.type input[type=checkbox] + label{display:inline-block;cursor:pointer;vertical-align:middle}
+.sv_basic dd.type input[type=checkbox]{}
+.sv_basic dd.type input[type=checkbox] + label{margin:8px 0;padding-left:25px;height:18px;line-height:18px;background:url(/resource/images/common/chkbox18x18.png) no-repeat left top}
+.sv_basic dd.type input[type=checkbox]:checked + label{background-position:0 -18px}
+.sv_basic dd.type input.disabled:checked + label{background-position:0 -36px;color:#4c4c4c}
+.sv_basic dd.type label + input[type=checkbox] + label{margin-left:20px}
+
 /* 2016-10-06 추가 - 설문 대상 3줄 이상은 scroll */
 .sv_basic dd .scrollbox{overflow:hidden;overflow-y:auto;padding-right:10px;max-height:66px}
 .sv_basic dd .period{display:inline-block;padding:3px 0 2px;margin-top:-3px;width:140px;vertical-align:middle}
 .sv_basic dd .period p{position:relative;padding-right:22px}
 .sv_basic dd .period p input{width:100%}
 .sv_basic .basic_opt{display:none;padding-top:11px}
+.sv_basic .basic_opt .target_box{padding-right:12px !important}
 .sv_basic .basic_opt .target_box>div{background-color:#fff}
+.sv_basic .basic_opt.target{}
+.sv_basic .basic_opt.target .btn.line02{padding-left:15px !important;padding-right:15px !important;min-width:auto !important}
 .sv_basic .basic_opt div + div{margin-top:5px}
 .sv_basic .basic_opt.file .filebox{}
 .sv_basic .basic_opt.file .filebox label{display:inline-block;position:static;right:auto;left:0}
@@ -44,6 +56,8 @@
 .sv_item p{position:relative}
 .sv_item p + p, .sv_item + .sv_item{margin-top:15px}
 .sv_item p.desc{margin-bottom:15px;line-height:20px}
+.sv_item p.desc .desc_img{display:block;padding-top:5px}
+.sv_item p.desc .desc_img img{width:100%;max-width:600px;border:1px solid #bbb}
 .sv_item input[type=radio]{position:absolute;left:-9999px}
 .sv_item input[type=radio] + label{display:block;padding-left:22px;height:16px;line-height:16px;background:url(/resource/images/common/radio16x16.png) no-repeat left top;cursor:pointer}
 .sv_item input[type=radio]:checked + label{background-position:0 -16px}
@@ -141,8 +155,15 @@
 .sv_wrap .item .answer.filebox .filename{padding-left:24px;text-decoration:underline;background:url(/resource/images/common/ico_file02.png) no-repeat left 10px}
 .sv_wrap .item .desc{clear:both;position:relative;margin:2px 0 -6px;padding-left:15px;line-height:26px}
 .sv_wrap .item .desc span{position:absolute;left:0;top:4px;font-size:26px;color:#ff3b57}
-.sv_wrap .item .answer .desc{margin-top:7px;padding-left:15px;line-height:26px}
+.sv_wrap .item .answer .desc{margin-top:7px;margin-right:-12px;padding-left:15px;line-height:26px;padding-right:0}
 .sv_wrap .item .del_item{margin-top:20px}
+.del_item02{margin-top:20px}
+.sv_wrap .item .item_con{}
+.sv_wrap .item .item_con .filebox{overflow:hidden;position:relative;height:34px;margin-top:5px;padding:0 199px 5px 0}
+.sv_wrap .item .item_con .filebox a{}
+.sv_wrap .item .item_con .filebox .btn.line02{position:absolute;left:0;top:0;padding:0 5px;width:123px}
+.sv_wrap .item .item_con .filebox span{display:inline-block;overflow:hidden;position:relative;max-width:100%;margin-left:135px;padding-left:34px;padding-right:30px;height:34px;line-height:34px;background:url(/resource/images/common/ico_file02.png) no-repeat 10px center;text-decoration:underline;white-space:nowrap;text-overflow:ellipsis;vertical-align:middle}
+.sv_wrap .item .item_con .filebox span .del_img{display:inline-block;overflow:hidden;position:absolute;right:0;top:0;margin:6px 0 0 0;width:22px;height:22px;vertical-align:middle;text-indent:-9999px;background:#f8d6da url(/resource/images/common/close9x8.png) no-repeat 7px 7px}
 
 .sv_wrap .item .answer .disable{background-color:#fff;border-color:#d9d9d9;color:#b2b2b2}
 .sv_wrap .item .answer .etc input[type=radio] + label{top:50%;margin-top:-8px}

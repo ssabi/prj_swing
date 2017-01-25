@@ -104,6 +104,10 @@ $(document).ready(function(){
 					</div><!-- //게시판 목록 -->
 
 					<div class="attr_manage">
+						<div class="tit_area">
+							<h3>게시판 설정</h3>
+						</div>
+
 						<div class="tbl_wrap">
 							<form action="#" method="post">
 								<table class="tbl_write">
@@ -136,44 +140,8 @@ $(document).ready(function(){
 									<tr>
 										<th scope="row">알림설정</th>
 										<td>
-											<input type="checkbox" name="" id="alarm01" /><label for="alarm01">SMS</label>
+											<input type="checkbox" name="" id="alarm01" /><label for="alarm01">SMS/MMS</label>
 											<input type="checkbox" name="" id="alarm02" /><label for="alarm02">E-mail</label>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row" class="vt">말머리</th>
-										<td>
-											<div class="subject">
-												<div class="subject_reg" data-chk-length="">
-													<input type="text" />
-													<a href="#" class="btn line02">추가</a>
-													<span class="byte"><span>0</span>/<em class="count">10</em></span>
-												</div><!-- //말머리 등록 -->
-
-												<div class="subject_result">
-													<div class="subject_list">
-														<div class="subject_item">
-															<p class="txt">말머리01<a href="#">삭제</a></p>
-															<p class="input"><input type="text" value="말머리01" /></p>
-														</div><!-- //item01 -->
-														<div class="subject_item">
-															<p class="txt">말머리02<a href="#">삭제</a></p>
-															<p class="input"><input type="text" value="말머리02" /></p>
-														</div><!-- //item02 -->
-														<div class="subject_item">
-															<p class="txt">말머리03<a href="#">삭제</a></p>
-															<p class="input"><input type="text" value="말머리03" /></p>
-														</div><!-- //item03 -->
-														<div class="subject_item">
-															<p class="txt">말머리04<a href="#">삭제</a></p>
-															<p class="input"><input type="text" value="말머리04" /></p>
-														</div><!-- //item04 -->
-													</div>
-
-													<p class="desc">말머리를 더블 클릭하면 수정할 수 있습니다.</p>
-												</div><!-- //말머리 결과 -->
-
-											</div>
 										</td>
 									</tr>
 									<tr>
@@ -272,15 +240,52 @@ $(document).ready(function(){
 									</tbody>
 								</table>
 							</form>
+							<p class="desc red02">비밀 속성 설정 시 운영자와 글 작성자만 게시글을 확인할 수 있음.</p>
 						</div>
-						<p class="desc red02">비밀 속성 설정 시 운영자와 글 작성자만 게시글을 확인할 수 있음.</p>
+
+						<div class="btnbox al_r">
+							<a href="#" class="btn confirm">저장</a>
+							<a href="#" class="btn">취소</a>
+						</div>
+
+						<div class="tit_area">
+							<h3>말머리 설정</h3>
+						</div>
+						<div class="tbl_wrap">
+							<table class="tbl_write">
+								<colgroup>
+									<col style="width:147px" />
+									<col />
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row" class="vt">
+										말머리
+										<a href="javascript:void(0);" class="btn_reg" onclick="gf_DialogFrame('SP_CO_3006_pop03.html', 370, 323, '말머리 설정', '', '', 'yes')">설정</a>
+									</th>
+									<td>
+										<div class="subject">
+											<div class="subject_list">
+												<span>말머리1</span>
+												<span>말머리2</span>
+												<span>말머리3</span>
+												<span>말머리4</span>
+												<span>말머리5</span>
+												<span>말머리6</span>
+												<span>말머리7</span>
+												<span>말머리8</span>
+												<span>말머리9</span>
+												<span>말머리10</span>
+											</div>
+										</div><!-- //말머리 결과 -->
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+
 					</div><!-- //메뉴/게시판 속성 관리 -->
 				</div><!-- //Manage -->
-
-				<div class="btnbox">
-					<a href="#" class="btn confirm">저장</a>
-					<a href="#" class="btn">취소</a>
-				</div><!-- //Button -->
 
 				<!-- //Content End -->
 			</div>
@@ -289,11 +294,12 @@ $(document).ready(function(){
 
 	<div id="footer">
 		<div class="infoot">
+			<span class="ft_logo skt">SK telecom</span>
 			<ul>
-				<li><a href="#">개인정보취급방침</a></li>
-				<li><a href="#">도움말</a></li>
+				<li><a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('/common/SP_FO_1002.html', '975', '672', '개인정보 취급방침');">개인정보취급방침</a></li>
+				<li><a href="javascript:void(0);" onclick="javascript:gf_DialogFrame('/common/SP_FO_1003.html', '975', '672', '도움말');">도움말</a></li>
 			</ul>
-			<address>서울특별시 중구 을지로 65(을지로2가) SK텔레콤(주) 대표이사/사장 : 장동현</address>
+			<address>서울특별시 중구 을지로 65(을지로2가) SK텔레콤(주)</address>
 			<p class="copyright">COPYRIGHT 2017 BY SKTELECOM CO., LTD. ALL RIGHTS RESERVED</p>
 		</div>
 	</div><!-- //Footer -->
