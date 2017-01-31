@@ -18,7 +18,7 @@ span.ui-datepicker-year:after{content:'년'}
 .ui-dialog .ui-dialog-content{padding:0;/* overflow:auto !important; */-webkit-overflow-scrolling:touch !important}
 .ui-dialog .ui-dialog-titlebar{padding:0;height:54px;background:#71a4c3;margin:0;border-radius:0 !important;font-family:Malgun Gothic, '맑은 고딕', Dotum, '돋움', sans-serif !important}
 .ui-dialog .ui-dialog-title{padding:11px 20px 0 19px;margin-bottom:1px;font-weight:normal;font-size:20px;line-height:24px;color:#fff;vertical-align:middle}
-.ui-dialog .ui-dialog-titlebar-close{display:block;overflow:hidden;position:absolute;right:15px;top:9px;margin:0;padding:10px;width:37px;height:37px;background:url(/resource/images/common/close17x17.png) no-repeat 10px 10px;text-indent:-9999px;border:0 !important;border-radius:0 !important}
+.ui-dialog .ui-dialog-titlebar-close{display:block;overflow:hidden;position:absolute;right:10px;top:9px;margin:0;padding:10px;width:37px;height:37px;background:url(/resource/images/common/close17x17.png) no-repeat 10px 10px;text-indent:-9999px;border:0 !important;border-radius:0 !important}
 .ui-dialog .ui-dialog-titlebar-close *{display:none}
 
 /* Alert - confirm */

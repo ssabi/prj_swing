@@ -160,9 +160,21 @@
 .help_list{overflow:hidden;overflow-y:auto;position:absolute;left:0;top:0;width:232px;height:100%;border-right:1px solid #b3b3b3}
 .help_list>div{padding:20px}
 .help_cont{margin-left:233px}
-.help_cont .scrollbox{overflow:hidden;overflow-y:auto;height:490px;padding:20px}
+.help_cont .scrollbox{overflow:hidden;overflow-y:auto;height:448px;padding:27px 30px 55px}
 .help_cont .cont{display:none}
 .help_cont .cont.show{display:block}
+.help_cont em, .help_cont strong{display:block;font-weight:normal;line-height:24px;letter-spacing:-0.05em;}
+.help_cont em{font-size:23px;color:#000}
+.help_cont strong{font-size:17px;color:#111}
+.help_cont p, .help_cont div{font-size:13px;line-height:24px;letter-spacing:-0.05em;color:#4c4c4c}
+.help_cont img{border:1px solid #ddd;vertical-align:middle}
+.help_cont em + strong{margin-top:14px}
+.help_cont em + p{margin-top:13px}
+.help_cont em + p img{margin-top:7px}
+.help_cont strong + p{margin-top:6px}
+.help_cont p + strong{margin-top:24px}
+.help_cont p + em{}
+.help_cont p + p{}
 
 .main_pop #pop_wrap{height:100%}
 .main_pop #pop_container{min-height:100%;/* margin-bottom:-42px; */padding:0}
